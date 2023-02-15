@@ -42,7 +42,6 @@ contract FidelityNFT is
     }
 
     using Strings for uint256;
-    bytes32 public constant PAUSER_ROLE = keccak256("PAUSER_ROLE");
     bytes32 public constant MINTER_ROLE = keccak256("MINTER_ROLE");
     bytes32 public constant UPGRADER_ROLE = keccak256("UPGRADER_ROLE");
 
@@ -81,7 +80,6 @@ contract FidelityNFT is
 
     function safeMint(address to, uint256 id)
         public
-        whenNotPaused
         onlyRole(MINTER_ROLE)
     {
         // Se hacen dos validaciones
