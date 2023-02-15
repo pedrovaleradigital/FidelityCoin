@@ -1,13 +1,15 @@
-# 🚀 Welcome to your new awesome project!
+# 🚀 This is the Fidelity Coin Project
 
-This project has been created using **webpack-cli**, you can now run
-
+The Coin Contract.
 ```
-npm run build
-```
-
-```
-yarn build
+FidelityCoin.sol
 ```
 
-to bundle your application
+The Rewards NFT Contract.
+```
+FidelityNFT.sol
+```
+
+Instructions:
+1. Execute the deploy.js script
+2. After deploying remember to set Expiration to your desired period (Default is 60 seconds)
