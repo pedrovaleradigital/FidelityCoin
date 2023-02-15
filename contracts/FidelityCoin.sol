@@ -25,14 +25,14 @@ contract FidelityCoin is ERC20, ERC20Burnable, AccessControl  {
         return _expirationPeriod;
     }
 
-    function burnIfExpired(address account) internal {
+    function _burnIfExpired(address account) internal {
         if (block.timestamp >= _balanceExpiration[account]){
             _burn(account, super.balanceOf(account));
         }
     }
 
     function mint(address to, uint256 amount) public onlyRole(MINTER_ROLE) {
-        burnIfExpired(to);
+        _burnIfExpired(to);
         _mint(to, amount);
         _balanceExpiration[to] = block.timestamp + _expirationPeriod;
     }
