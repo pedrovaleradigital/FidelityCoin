@@ -41,7 +41,7 @@ contract FidelityCoin is ERC20, ERC20Burnable, AccessControl  {
         uint256 burnTransferAmount = amount / 10;
         require (balanceOf(from) >= amount + burnTransferAmount, "Not enough active balance including burning fee!");
         require (_balanceExpiration[to]>0, "Receiver wallet has never been activated!");
-        burnIfExpired(to);
+        _burnIfExpired(to);
         super._transfer(from, to, amount);
         _burn(from,burnTransferAmount);
         _balanceExpiration[to] = block.timestamp + _expirationPeriod;
