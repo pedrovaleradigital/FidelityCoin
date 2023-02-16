@@ -46,6 +46,7 @@ contract FidelityNFT is
     bytes32 public constant UPGRADER_ROLE = keccak256("UPGRADER_ROLE");
 
     string ipfsCID;
+    string lastNftId;
 
     /// @custom:oz-upgrades-unsafe-allow constructor
     constructor() {
@@ -55,11 +56,13 @@ contract FidelityNFT is
     function initialize(
         string memory _tokenName,
         string memory _tokenSymbol,
-        string memory _tokenIpfsCID
+        string memory _tokenIpfsCID,
+        uint256 _tokenLastNftId
     ) public initializer {
         _grantRole(DEFAULT_ADMIN_ROLE, msg.sender);
         _grantRole(MINTER_ROLE, msg.sender);
         _setIpfsCID(_tokenIpfsCID);
+        _setLastNftId(_tokenLastNftId);
 
         __ERC721_init(_tokenName, _tokenSymbol);
         __AccessControl_init();
@@ -74,6 +77,14 @@ contract FidelityNFT is
         return ipfsCID;
     }
 
+    function _setLastNftId(uint256 _lastNftId) internal {
+        lastNftId = _lastNftId;
+    }
+
+    function _getLastNftId() internal view returns (uint256) {
+        return lastNftId;
+    }
+
     function _baseURI() internal view override returns (string memory) {
         return string(abi.encodePacked("ipfs://", _getIpfsCID(), "/"));
     }
@@ -82,12 +93,8 @@ contract FidelityNFT is
         public
         onlyRole(MINTER_ROLE)
     {
-        // Se hacen dos validaciones
-        // 1 - Dicho id no haya sido acuñado antes
         require(_ownerOf(id) == address(0), "Token is already minted");
-        // 2 - Id se encuentre en el rando inclusivo de 1 a 30
-        //      * Mensaje de error: "Public Sale: id must be between 1 and 30"
-        require(id >= 1 && id <= 30, "NFT: Token id out of range");
+        require(id >= 1 && id <= lastNftId, "NFT: Token id out of range");
         _safeMint(to, id);
     }
 
