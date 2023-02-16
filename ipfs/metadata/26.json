@@ -1,0 +1,32 @@
+{
+  "name": "Fidelity NFT  #26",
+  "description": "Fidelity NFT colllection, created as Loyalty Program Solution, with Superpowered NFT and expiration Token",
+  "image": "ipfs://QmNtNgKcTdFhm945zFMgYNaKFH8YM3ZgK83yzvhztPstjp/26.png",
+  "edition": 26,
+  "attributes": [
+    {
+      "trait_type": "prize",
+      "value": "flight"
+    },
+    {
+      "trait_type": "style",
+      "value": "digital art"
+    },
+    {
+      "trait_type": "platform",
+      "value": "dall-e-2"
+    },
+    {
+      "trait_type": "magic words",
+      "value": "A plane landing next to a beautiful beach, digital art"
+    },
+    {
+      "trait_type": "retail price",
+      "value": "2500"
+    },
+    {
+      "trait_type": "FIDOS to mint",
+      "value": "62500"
+    }
+  ]
+}

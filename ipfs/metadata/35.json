@@ -1,0 +1,32 @@
+{
+  "name": "Fidelity NFT  #35",
+  "description": "Fidelity NFT colllection, created as Loyalty Program Solution, with Superpowered NFT and expiration Token",
+  "image": "ipfs://QmNtNgKcTdFhm945zFMgYNaKFH8YM3ZgK83yzvhztPstjp/35.png",
+  "edition": 35,
+  "attributes": [
+    {
+      "trait_type": "prize",
+      "value": "smart watch"
+    },
+    {
+      "trait_type": "style",
+      "value": "monet style"
+    },
+    {
+      "trait_type": "platform",
+      "value": "dall-e-2"
+    },
+    {
+      "trait_type": "magic words",
+      "value": "Monet Style of a  hand wearing a Woman Watch"
+    },
+    {
+      "trait_type": "retail price",
+      "value": "700"
+    },
+    {
+      "trait_type": "FIDOS to mint",
+      "value": "17500"
+    }
+  ]
+}

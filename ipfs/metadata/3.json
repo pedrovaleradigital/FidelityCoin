@@ -1,0 +1,32 @@
+{
+  "name": "Fidelity NFT  #3",
+  "description": "Fidelity NFT colllection, created as Loyalty Program Solution, with Superpowered NFT and expiration Token",
+  "image": "ipfs://QmNtNgKcTdFhm945zFMgYNaKFH8YM3ZgK83yzvhztPstjp/3.png",
+  "edition": 3,
+  "attributes": [
+    {
+      "trait_type": "prize",
+      "value": "blender"
+    },
+    {
+      "trait_type": "style",
+      "value": "pixel art"
+    },
+    {
+      "trait_type": "platform",
+      "value": "dall-e-2"
+    },
+    {
+      "trait_type": "magic words",
+      "value": "A shiny transparent blender inside a kitchen next to a cup and a lemon pixel art"
+    },
+    {
+      "trait_type": "retail price",
+      "value": "100"
+    },
+    {
+      "trait_type": "FIDOS to mint",
+      "value": "2500"
+    }
+  ]
+}

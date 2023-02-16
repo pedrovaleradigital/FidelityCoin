@@ -1,0 +1,32 @@
+{
+  "name": "Fidelity NFT  #22",
+  "description": "Fidelity NFT colllection, created as Loyalty Program Solution, with Superpowered NFT and expiration Token",
+  "image": "ipfs://QmNtNgKcTdFhm945zFMgYNaKFH8YM3ZgK83yzvhztPstjp/22.png",
+  "edition": 22,
+  "attributes": [
+    {
+      "trait_type": "prize",
+      "value": "hamburger and french fries"
+    },
+    {
+      "trait_type": "style",
+      "value": "stained glass window"
+    },
+    {
+      "trait_type": "platform",
+      "value": "dall-e-2"
+    },
+    {
+      "trait_type": "magic words",
+      "value": "A stained glass window of a hamburger and french fries"
+    },
+    {
+      "trait_type": "retail price",
+      "value": "35"
+    },
+    {
+      "trait_type": "FIDOS to mint",
+      "value": "875"
+    }
+  ]
+}

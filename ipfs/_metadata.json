@@ -1,0 +1,886 @@
+[
+  {
+    "name": "Fidelity NFT #1",
+    "description": "Fidelity NFT colllection, created as Loyalty Program Solution, with Superpowered NFT and expiration Token",
+    "image": "ipfs://QmNtNgKcTdFhm945zFMgYNaKFH8YM3ZgK83yzvhztPstjp/1.png",
+    "edition": 1,
+    "attributes": [
+      { "trait_type": "prize", "value": "blender" },
+      { "trait_type": "style", "value": "pixel art" },
+      { "trait_type": "platform", "value": "dall-e-2" },
+      {
+        "trait_type": "magic words",
+        "value": "A shiny transparent blender inside a kitchen next to a cup and a lemon pixel art"
+      },
+      { "trait_type": "retail price", "value": "100" },
+      { "trait_type": "FIDOS to mint", "value": "2500" }
+    ]
+  },
+  {
+    "name": "Fidelity NFT #2",
+    "description": "Fidelity NFT colllection, created as Loyalty Program Solution, with Superpowered NFT and expiration Token",
+    "image": "ipfs://QmNtNgKcTdFhm945zFMgYNaKFH8YM3ZgK83yzvhztPstjp/2.png",
+    "edition": 2,
+    "attributes": [
+      { "trait_type": "prize", "value": "blender" },
+      { "trait_type": "style", "value": "pixel art" },
+      { "trait_type": "platform", "value": "dall-e-2" },
+      {
+        "trait_type": "magic words",
+        "value": "A shiny transparent blender inside a kitchen next to a cup and a lemon pixel art"
+      },
+      { "trait_type": "retail price", "value": "100" },
+      { "trait_type": "FIDOS to mint", "value": "2500" }
+    ]
+  },
+  {
+    "name": "Fidelity NFT #3",
+    "description": "Fidelity NFT colllection, created as Loyalty Program Solution, with Superpowered NFT and expiration Token",
+    "image": "ipfs://QmNtNgKcTdFhm945zFMgYNaKFH8YM3ZgK83yzvhztPstjp/3.png",
+    "edition": 3,
+    "attributes": [
+      { "trait_type": "prize", "value": "blender" },
+      { "trait_type": "style", "value": "pixel art" },
+      { "trait_type": "platform", "value": "dall-e-2" },
+      {
+        "trait_type": "magic words",
+        "value": "A shiny transparent blender inside a kitchen next to a cup and a lemon pixel art"
+      },
+      { "trait_type": "retail price", "value": "100" },
+      { "trait_type": "FIDOS to mint", "value": "2500" }
+    ]
+  },
+  {
+    "name": "Fidelity NFT #4",
+    "description": "Fidelity NFT colllection, created as Loyalty Program Solution, with Superpowered NFT and expiration Token",
+    "image": "ipfs://QmNtNgKcTdFhm945zFMgYNaKFH8YM3ZgK83yzvhztPstjp/4.png",
+    "edition": 4,
+    "attributes": [
+      { "trait_type": "prize", "value": "blender" },
+      { "trait_type": "style", "value": "pixel art" },
+      { "trait_type": "platform", "value": "dall-e-2" },
+      {
+        "trait_type": "magic words",
+        "value": "A shiny transparent blender inside a kitchen next to a cup and a lemon pixel art"
+      },
+      { "trait_type": "retail price", "value": "100" },
+      { "trait_type": "FIDOS to mint", "value": "2500" }
+    ]
+  },
+  {
+    "name": "Fidelity NFT #5",
+    "description": "Fidelity NFT colllection, created as Loyalty Program Solution, with Superpowered NFT and expiration Token",
+    "image": "ipfs://QmNtNgKcTdFhm945zFMgYNaKFH8YM3ZgK83yzvhztPstjp/5.png",
+    "edition": 5,
+    "attributes": [
+      { "trait_type": "prize", "value": "sunglasses" },
+      { "trait_type": "style", "value": "van gogh style" },
+      { "trait_type": "platform", "value": "dall-e-2" },
+      {
+        "trait_type": "magic words",
+        "value": "A beautiful blonde woman wearing sunglasses in a sunny day, Van Gogh style"
+      },
+      { "trait_type": "retail price", "value": "200" },
+      { "trait_type": "FIDOS to mint", "value": "5000" }
+    ]
+  },
+  {
+    "name": "Fidelity NFT #6",
+    "description": "Fidelity NFT colllection, created as Loyalty Program Solution, with Superpowered NFT and expiration Token",
+    "image": "ipfs://QmNtNgKcTdFhm945zFMgYNaKFH8YM3ZgK83yzvhztPstjp/6.png",
+    "edition": 6,
+    "attributes": [
+      { "trait_type": "prize", "value": "sunglasses" },
+      { "trait_type": "style", "value": "van gogh style" },
+      { "trait_type": "platform", "value": "dall-e-2" },
+      {
+        "trait_type": "magic words",
+        "value": "A beautiful blonde woman wearing sunglasses in a sunny day, Van Gogh style"
+      },
+      { "trait_type": "retail price", "value": "200" },
+      { "trait_type": "FIDOS to mint", "value": "5000" }
+    ]
+  },
+  {
+    "name": "Fidelity NFT #7",
+    "description": "Fidelity NFT colllection, created as Loyalty Program Solution, with Superpowered NFT and expiration Token",
+    "image": "ipfs://QmNtNgKcTdFhm945zFMgYNaKFH8YM3ZgK83yzvhztPstjp/7.png",
+    "edition": 7,
+    "attributes": [
+      { "trait_type": "prize", "value": "sunglasses" },
+      { "trait_type": "style", "value": "van gogh style" },
+      { "trait_type": "platform", "value": "dall-e-2" },
+      {
+        "trait_type": "magic words",
+        "value": "A beautiful blonde woman wearing sunglasses in a sunny day, Van Gogh style"
+      },
+      { "trait_type": "retail price", "value": "200" },
+      { "trait_type": "FIDOS to mint", "value": "5000" }
+    ]
+  },
+  {
+    "name": "Fidelity NFT #8",
+    "description": "Fidelity NFT colllection, created as Loyalty Program Solution, with Superpowered NFT and expiration Token",
+    "image": "ipfs://QmNtNgKcTdFhm945zFMgYNaKFH8YM3ZgK83yzvhztPstjp/8.png",
+    "edition": 8,
+    "attributes": [
+      { "trait_type": "prize", "value": "sunglasses" },
+      { "trait_type": "style", "value": "van gogh style" },
+      { "trait_type": "platform", "value": "dall-e-2" },
+      {
+        "trait_type": "magic words",
+        "value": "A beautiful blonde woman wearing sunglasses in a sunny day, Van Gogh style"
+      },
+      { "trait_type": "retail price", "value": "200" },
+      { "trait_type": "FIDOS to mint", "value": "5000" }
+    ]
+  },
+  {
+    "name": "Fidelity NFT #9",
+    "description": "Fidelity NFT colllection, created as Loyalty Program Solution, with Superpowered NFT and expiration Token",
+    "image": "ipfs://QmNtNgKcTdFhm945zFMgYNaKFH8YM3ZgK83yzvhztPstjp/9.png",
+    "edition": 9,
+    "attributes": [
+      { "trait_type": "prize", "value": "smart tv" },
+      { "trait_type": "style", "value": "rendered photo" },
+      { "trait_type": "platform", "value": "dall-e-2" },
+      {
+        "trait_type": "magic words",
+        "value": "A Smart TV in a clean living room, rendered photo"
+      },
+      { "trait_type": "retail price", "value": "800" },
+      { "trait_type": "FIDOS to mint", "value": "20000" }
+    ]
+  },
+  {
+    "name": "Fidelity NFT #10",
+    "description": "Fidelity NFT colllection, created as Loyalty Program Solution, with Superpowered NFT and expiration Token",
+    "image": "ipfs://QmNtNgKcTdFhm945zFMgYNaKFH8YM3ZgK83yzvhztPstjp/10.png",
+    "edition": 10,
+    "attributes": [
+      { "trait_type": "prize", "value": "smart tv" },
+      { "trait_type": "style", "value": "rendered photo" },
+      { "trait_type": "platform", "value": "dall-e-2" },
+      {
+        "trait_type": "magic words",
+        "value": "A Smart TV in a clean living room, rendered photo"
+      },
+      { "trait_type": "retail price", "value": "800" },
+      { "trait_type": "FIDOS to mint", "value": "20000" }
+    ]
+  },
+  {
+    "name": "Fidelity NFT #11",
+    "description": "Fidelity NFT colllection, created as Loyalty Program Solution, with Superpowered NFT and expiration Token",
+    "image": "ipfs://QmNtNgKcTdFhm945zFMgYNaKFH8YM3ZgK83yzvhztPstjp/11.png",
+    "edition": 11,
+    "attributes": [
+      { "trait_type": "prize", "value": "smart tv" },
+      { "trait_type": "style", "value": "rendered photo" },
+      { "trait_type": "platform", "value": "dall-e-2" },
+      {
+        "trait_type": "magic words",
+        "value": "A Smart TV in a clean living room, rendered photo"
+      },
+      { "trait_type": "retail price", "value": "800" },
+      { "trait_type": "FIDOS to mint", "value": "20000" }
+    ]
+  },
+  {
+    "name": "Fidelity NFT #12",
+    "description": "Fidelity NFT colllection, created as Loyalty Program Solution, with Superpowered NFT and expiration Token",
+    "image": "ipfs://QmNtNgKcTdFhm945zFMgYNaKFH8YM3ZgK83yzvhztPstjp/12.png",
+    "edition": 12,
+    "attributes": [
+      { "trait_type": "prize", "value": "smart tv" },
+      { "trait_type": "style", "value": "rendered photo" },
+      { "trait_type": "platform", "value": "dall-e-2" },
+      {
+        "trait_type": "magic words",
+        "value": "A Smart TV in a clean living room, rendered photo"
+      },
+      { "trait_type": "retail price", "value": "800" },
+      { "trait_type": "FIDOS to mint", "value": "20000" }
+    ]
+  },
+  {
+    "name": "Fidelity NFT #13",
+    "description": "Fidelity NFT colllection, created as Loyalty Program Solution, with Superpowered NFT and expiration Token",
+    "image": "ipfs://QmNtNgKcTdFhm945zFMgYNaKFH8YM3ZgK83yzvhztPstjp/13.png",
+    "edition": 13,
+    "attributes": [
+      { "trait_type": "prize", "value": "macbook pro" },
+      { "trait_type": "style", "value": "impressionist oil painting" },
+      { "trait_type": "platform", "value": "dall-e-2" },
+      {
+        "trait_type": "magic words",
+        "value": "An Impresionist Oil Painting of hands on a Macbook Pro, outdoors"
+      },
+      { "trait_type": "retail price", "value": "8000" },
+      { "trait_type": "FIDOS to mint", "value": "200000" }
+    ]
+  },
+  {
+    "name": "Fidelity NFT #14",
+    "description": "Fidelity NFT colllection, created as Loyalty Program Solution, with Superpowered NFT and expiration Token",
+    "image": "ipfs://QmNtNgKcTdFhm945zFMgYNaKFH8YM3ZgK83yzvhztPstjp/14.png",
+    "edition": 14,
+    "attributes": [
+      { "trait_type": "prize", "value": "macbook pro" },
+      { "trait_type": "style", "value": "impressionist oil painting" },
+      { "trait_type": "platform", "value": "dall-e-2" },
+      {
+        "trait_type": "magic words",
+        "value": "An Impresionist Oil Painting of hands on a Macbook Pro, outdoors"
+      },
+      { "trait_type": "retail price", "value": "8000" },
+      { "trait_type": "FIDOS to mint", "value": "200000" }
+    ]
+  },
+  {
+    "name": "Fidelity NFT #15",
+    "description": "Fidelity NFT colllection, created as Loyalty Program Solution, with Superpowered NFT and expiration Token",
+    "image": "ipfs://QmNtNgKcTdFhm945zFMgYNaKFH8YM3ZgK83yzvhztPstjp/15.png",
+    "edition": 15,
+    "attributes": [
+      { "trait_type": "prize", "value": "macbook pro" },
+      { "trait_type": "style", "value": "impressionist oil painting" },
+      { "trait_type": "platform", "value": "dall-e-2" },
+      {
+        "trait_type": "magic words",
+        "value": "An Impresionist Oil Painting of hands on a Macbook Pro, outdoors"
+      },
+      { "trait_type": "retail price", "value": "8000" },
+      { "trait_type": "FIDOS to mint", "value": "200000" }
+    ]
+  },
+  {
+    "name": "Fidelity NFT #16",
+    "description": "Fidelity NFT colllection, created as Loyalty Program Solution, with Superpowered NFT and expiration Token",
+    "image": "ipfs://QmNtNgKcTdFhm945zFMgYNaKFH8YM3ZgK83yzvhztPstjp/16.png",
+    "edition": 16,
+    "attributes": [
+      { "trait_type": "prize", "value": "macbook pro" },
+      { "trait_type": "style", "value": "impressionist oil painting" },
+      { "trait_type": "platform", "value": "dall-e-2" },
+      {
+        "trait_type": "magic words",
+        "value": "An Impresionist Oil Painting of hands on a Macbook Pro, outdoors"
+      },
+      { "trait_type": "retail price", "value": "8000" },
+      { "trait_type": "FIDOS to mint", "value": "200000" }
+    ]
+  },
+  {
+    "name": "Fidelity NFT #17",
+    "description": "Fidelity NFT colllection, created as Loyalty Program Solution, with Superpowered NFT and expiration Token",
+    "image": "ipfs://QmNtNgKcTdFhm945zFMgYNaKFH8YM3ZgK83yzvhztPstjp/17.png",
+    "edition": 17,
+    "attributes": [
+      { "trait_type": "prize", "value": "clothes iron" },
+      { "trait_type": "style", "value": "abstract pencil and watercolor art" },
+      { "trait_type": "platform", "value": "dall-e-2" },
+      {
+        "trait_type": "magic words",
+        "value": "abstract pencil and watercolor art of an clothes iron in a bedroom"
+      },
+      { "trait_type": "retail price", "value": "50" },
+      { "trait_type": "FIDOS to mint", "value": "1250" }
+    ]
+  },
+  {
+    "name": "Fidelity NFT #18",
+    "description": "Fidelity NFT colllection, created as Loyalty Program Solution, with Superpowered NFT and expiration Token",
+    "image": "ipfs://QmNtNgKcTdFhm945zFMgYNaKFH8YM3ZgK83yzvhztPstjp/18.png",
+    "edition": 18,
+    "attributes": [
+      { "trait_type": "prize", "value": "clothes iron" },
+      { "trait_type": "style", "value": "abstract pencil and watercolor art" },
+      { "trait_type": "platform", "value": "dall-e-2" },
+      {
+        "trait_type": "magic words",
+        "value": "abstract pencil and watercolor art of an clothes iron in a bedroom"
+      },
+      { "trait_type": "retail price", "value": "50" },
+      { "trait_type": "FIDOS to mint", "value": "1250" }
+    ]
+  },
+  {
+    "name": "Fidelity NFT #19",
+    "description": "Fidelity NFT colllection, created as Loyalty Program Solution, with Superpowered NFT and expiration Token",
+    "image": "ipfs://QmNtNgKcTdFhm945zFMgYNaKFH8YM3ZgK83yzvhztPstjp/19.png",
+    "edition": 19,
+    "attributes": [
+      { "trait_type": "prize", "value": "clothes iron" },
+      { "trait_type": "style", "value": "abstract pencil and watercolor art" },
+      { "trait_type": "platform", "value": "dall-e-2" },
+      {
+        "trait_type": "magic words",
+        "value": "abstract pencil and watercolor art of an clothes iron in a bedroom"
+      },
+      { "trait_type": "retail price", "value": "50" },
+      { "trait_type": "FIDOS to mint", "value": "1250" }
+    ]
+  },
+  {
+    "name": "Fidelity NFT #20",
+    "description": "Fidelity NFT colllection, created as Loyalty Program Solution, with Superpowered NFT and expiration Token",
+    "image": "ipfs://QmNtNgKcTdFhm945zFMgYNaKFH8YM3ZgK83yzvhztPstjp/20.png",
+    "edition": 20,
+    "attributes": [
+      { "trait_type": "prize", "value": "clothes iron" },
+      { "trait_type": "style", "value": "abstract pencil and watercolor art" },
+      { "trait_type": "platform", "value": "dall-e-2" },
+      {
+        "trait_type": "magic words",
+        "value": "abstract pencil and watercolor art of an clothes iron in a bedroom"
+      },
+      { "trait_type": "retail price", "value": "50" },
+      { "trait_type": "FIDOS to mint", "value": "1250" }
+    ]
+  },
+  {
+    "name": "Fidelity NFT #21",
+    "description": "Fidelity NFT colllection, created as Loyalty Program Solution, with Superpowered NFT and expiration Token",
+    "image": "ipfs://QmNtNgKcTdFhm945zFMgYNaKFH8YM3ZgK83yzvhztPstjp/21.png",
+    "edition": 21,
+    "attributes": [
+      { "trait_type": "prize", "value": "hamburger and french fries" },
+      { "trait_type": "style", "value": "stained glass window" },
+      { "trait_type": "platform", "value": "dall-e-2" },
+      {
+        "trait_type": "magic words",
+        "value": "A stained glass window of a hamburger and french fries"
+      },
+      { "trait_type": "retail price", "value": "35" },
+      { "trait_type": "FIDOS to mint", "value": "875" }
+    ]
+  },
+  {
+    "name": "Fidelity NFT #22",
+    "description": "Fidelity NFT colllection, created as Loyalty Program Solution, with Superpowered NFT and expiration Token",
+    "image": "ipfs://QmNtNgKcTdFhm945zFMgYNaKFH8YM3ZgK83yzvhztPstjp/22.png",
+    "edition": 22,
+    "attributes": [
+      { "trait_type": "prize", "value": "hamburger and french fries" },
+      { "trait_type": "style", "value": "stained glass window" },
+      { "trait_type": "platform", "value": "dall-e-2" },
+      {
+        "trait_type": "magic words",
+        "value": "A stained glass window of a hamburger and french fries"
+      },
+      { "trait_type": "retail price", "value": "35" },
+      { "trait_type": "FIDOS to mint", "value": "875" }
+    ]
+  },
+  {
+    "name": "Fidelity NFT #23",
+    "description": "Fidelity NFT colllection, created as Loyalty Program Solution, with Superpowered NFT and expiration Token",
+    "image": "ipfs://QmNtNgKcTdFhm945zFMgYNaKFH8YM3ZgK83yzvhztPstjp/23.png",
+    "edition": 23,
+    "attributes": [
+      { "trait_type": "prize", "value": "hamburger and french fries" },
+      { "trait_type": "style", "value": "stained glass window" },
+      { "trait_type": "platform", "value": "dall-e-2" },
+      {
+        "trait_type": "magic words",
+        "value": "A stained glass window of a hamburger and french fries"
+      },
+      { "trait_type": "retail price", "value": "35" },
+      { "trait_type": "FIDOS to mint", "value": "875" }
+    ]
+  },
+  {
+    "name": "Fidelity NFT #24",
+    "description": "Fidelity NFT colllection, created as Loyalty Program Solution, with Superpowered NFT and expiration Token",
+    "image": "ipfs://QmNtNgKcTdFhm945zFMgYNaKFH8YM3ZgK83yzvhztPstjp/24.png",
+    "edition": 24,
+    "attributes": [
+      { "trait_type": "prize", "value": "hamburger and french fries" },
+      { "trait_type": "style", "value": "stained glass window" },
+      { "trait_type": "platform", "value": "dall-e-2" },
+      {
+        "trait_type": "magic words",
+        "value": "A stained glass window of a hamburger and french fries"
+      },
+      { "trait_type": "retail price", "value": "35" },
+      { "trait_type": "FIDOS to mint", "value": "875" }
+    ]
+  },
+  {
+    "name": "Fidelity NFT #25",
+    "description": "Fidelity NFT colllection, created as Loyalty Program Solution, with Superpowered NFT and expiration Token",
+    "image": "ipfs://QmNtNgKcTdFhm945zFMgYNaKFH8YM3ZgK83yzvhztPstjp/25.png",
+    "edition": 25,
+    "attributes": [
+      { "trait_type": "prize", "value": "flight" },
+      { "trait_type": "style", "value": "digital art" },
+      { "trait_type": "platform", "value": "dall-e-2" },
+      {
+        "trait_type": "magic words",
+        "value": "A plane landing next to a beautiful beach, digital art"
+      },
+      { "trait_type": "retail price", "value": "2500" },
+      { "trait_type": "FIDOS to mint", "value": "62500" }
+    ]
+  },
+  {
+    "name": "Fidelity NFT #26",
+    "description": "Fidelity NFT colllection, created as Loyalty Program Solution, with Superpowered NFT and expiration Token",
+    "image": "ipfs://QmNtNgKcTdFhm945zFMgYNaKFH8YM3ZgK83yzvhztPstjp/26.png",
+    "edition": 26,
+    "attributes": [
+      { "trait_type": "prize", "value": "flight" },
+      { "trait_type": "style", "value": "digital art" },
+      { "trait_type": "platform", "value": "dall-e-2" },
+      {
+        "trait_type": "magic words",
+        "value": "A plane landing next to a beautiful beach, digital art"
+      },
+      { "trait_type": "retail price", "value": "2500" },
+      { "trait_type": "FIDOS to mint", "value": "62500" }
+    ]
+  },
+  {
+    "name": "Fidelity NFT #27",
+    "description": "Fidelity NFT colllection, created as Loyalty Program Solution, with Superpowered NFT and expiration Token",
+    "image": "ipfs://QmNtNgKcTdFhm945zFMgYNaKFH8YM3ZgK83yzvhztPstjp/27.png",
+    "edition": 27,
+    "attributes": [
+      { "trait_type": "prize", "value": "flight" },
+      { "trait_type": "style", "value": "digital art" },
+      { "trait_type": "platform", "value": "dall-e-2" },
+      {
+        "trait_type": "magic words",
+        "value": "A plane landing next to a beautiful beach, digital art"
+      },
+      { "trait_type": "retail price", "value": "2500" },
+      { "trait_type": "FIDOS to mint", "value": "62500" }
+    ]
+  },
+  {
+    "name": "Fidelity NFT #28",
+    "description": "Fidelity NFT colllection, created as Loyalty Program Solution, with Superpowered NFT and expiration Token",
+    "image": "ipfs://QmNtNgKcTdFhm945zFMgYNaKFH8YM3ZgK83yzvhztPstjp/28.png",
+    "edition": 28,
+    "attributes": [
+      { "trait_type": "prize", "value": "flight" },
+      { "trait_type": "style", "value": "digital art" },
+      { "trait_type": "platform", "value": "dall-e-2" },
+      {
+        "trait_type": "magic words",
+        "value": "A plane landing next to a beautiful beach, digital art"
+      },
+      { "trait_type": "retail price", "value": "2500" },
+      { "trait_type": "FIDOS to mint", "value": "62500" }
+    ]
+  },
+  {
+    "name": "Fidelity NFT #29",
+    "description": "Fidelity NFT colllection, created as Loyalty Program Solution, with Superpowered NFT and expiration Token",
+    "image": "ipfs://QmNtNgKcTdFhm945zFMgYNaKFH8YM3ZgK83yzvhztPstjp/29.png",
+    "edition": 29,
+    "attributes": [
+      { "trait_type": "prize", "value": "playstation" },
+      { "trait_type": "style", "value": "oil painting my matisse" },
+      { "trait_type": "platform", "value": "dall-e-2" },
+      {
+        "trait_type": "magic words",
+        "value": "an oil painting by Matisse of a kid playinf with playstation"
+      },
+      { "trait_type": "retail price", "value": "3500" },
+      { "trait_type": "FIDOS to mint", "value": "87500" }
+    ]
+  },
+  {
+    "name": "Fidelity NFT #30",
+    "description": "Fidelity NFT colllection, created as Loyalty Program Solution, with Superpowered NFT and expiration Token",
+    "image": "ipfs://QmNtNgKcTdFhm945zFMgYNaKFH8YM3ZgK83yzvhztPstjp/30.png",
+    "edition": 30,
+    "attributes": [
+      { "trait_type": "prize", "value": "playstation" },
+      { "trait_type": "style", "value": "oil painting my matisse" },
+      { "trait_type": "platform", "value": "dall-e-2" },
+      {
+        "trait_type": "magic words",
+        "value": "an oil painting by Matisse of a kid playinf with playstation"
+      },
+      { "trait_type": "retail price", "value": "3500" },
+      { "trait_type": "FIDOS to mint", "value": "87500" }
+    ]
+  },
+  {
+    "name": "Fidelity NFT #31",
+    "description": "Fidelity NFT colllection, created as Loyalty Program Solution, with Superpowered NFT and expiration Token",
+    "image": "ipfs://QmNtNgKcTdFhm945zFMgYNaKFH8YM3ZgK83yzvhztPstjp/31.png",
+    "edition": 31,
+    "attributes": [
+      { "trait_type": "prize", "value": "playstation" },
+      { "trait_type": "style", "value": "oil painting my matisse" },
+      { "trait_type": "platform", "value": "dall-e-2" },
+      {
+        "trait_type": "magic words",
+        "value": "an oil painting by Matisse of a kid playinf with playstation"
+      },
+      { "trait_type": "retail price", "value": "3500" },
+      { "trait_type": "FIDOS to mint", "value": "87500" }
+    ]
+  },
+  {
+    "name": "Fidelity NFT #32",
+    "description": "Fidelity NFT colllection, created as Loyalty Program Solution, with Superpowered NFT and expiration Token",
+    "image": "ipfs://QmNtNgKcTdFhm945zFMgYNaKFH8YM3ZgK83yzvhztPstjp/32.png",
+    "edition": 32,
+    "attributes": [
+      { "trait_type": "prize", "value": "playstation" },
+      { "trait_type": "style", "value": "oil painting my matisse" },
+      { "trait_type": "platform", "value": "dall-e-2" },
+      {
+        "trait_type": "magic words",
+        "value": "an oil painting by Matisse of a kid playinf with playstation"
+      },
+      { "trait_type": "retail price", "value": "3500" },
+      { "trait_type": "FIDOS to mint", "value": "87500" }
+    ]
+  },
+  {
+    "name": "Fidelity NFT #33",
+    "description": "Fidelity NFT colllection, created as Loyalty Program Solution, with Superpowered NFT and expiration Token",
+    "image": "ipfs://QmNtNgKcTdFhm945zFMgYNaKFH8YM3ZgK83yzvhztPstjp/33.png",
+    "edition": 33,
+    "attributes": [
+      { "trait_type": "prize", "value": "smart watch" },
+      { "trait_type": "style", "value": "monet style" },
+      { "trait_type": "platform", "value": "dall-e-2" },
+      {
+        "trait_type": "magic words",
+        "value": "Monet Style of a  hand wearing a Woman Watch"
+      },
+      { "trait_type": "retail price", "value": "700" },
+      { "trait_type": "FIDOS to mint", "value": "17500" }
+    ]
+  },
+  {
+    "name": "Fidelity NFT #34",
+    "description": "Fidelity NFT colllection, created as Loyalty Program Solution, with Superpowered NFT and expiration Token",
+    "image": "ipfs://QmNtNgKcTdFhm945zFMgYNaKFH8YM3ZgK83yzvhztPstjp/34.png",
+    "edition": 34,
+    "attributes": [
+      { "trait_type": "prize", "value": "smart watch" },
+      { "trait_type": "style", "value": "monet style" },
+      { "trait_type": "platform", "value": "dall-e-2" },
+      {
+        "trait_type": "magic words",
+        "value": "Monet Style of a  hand wearing a Woman Watch"
+      },
+      { "trait_type": "retail price", "value": "700" },
+      { "trait_type": "FIDOS to mint", "value": "17500" }
+    ]
+  },
+  {
+    "name": "Fidelity NFT #35",
+    "description": "Fidelity NFT colllection, created as Loyalty Program Solution, with Superpowered NFT and expiration Token",
+    "image": "ipfs://QmNtNgKcTdFhm945zFMgYNaKFH8YM3ZgK83yzvhztPstjp/35.png",
+    "edition": 35,
+    "attributes": [
+      { "trait_type": "prize", "value": "smart watch" },
+      { "trait_type": "style", "value": "monet style" },
+      { "trait_type": "platform", "value": "dall-e-2" },
+      {
+        "trait_type": "magic words",
+        "value": "Monet Style of a  hand wearing a Woman Watch"
+      },
+      { "trait_type": "retail price", "value": "700" },
+      { "trait_type": "FIDOS to mint", "value": "17500" }
+    ]
+  },
+  {
+    "name": "Fidelity NFT #36",
+    "description": "Fidelity NFT colllection, created as Loyalty Program Solution, with Superpowered NFT and expiration Token",
+    "image": "ipfs://QmNtNgKcTdFhm945zFMgYNaKFH8YM3ZgK83yzvhztPstjp/36.png",
+    "edition": 36,
+    "attributes": [
+      { "trait_type": "prize", "value": "smart watch" },
+      { "trait_type": "style", "value": "monet style" },
+      { "trait_type": "platform", "value": "dall-e-2" },
+      {
+        "trait_type": "magic words",
+        "value": "Monet Style of a  hand wearing a Woman Watch"
+      },
+      { "trait_type": "retail price", "value": "700" },
+      { "trait_type": "FIDOS to mint", "value": "17500" }
+    ]
+  },
+  {
+    "name": "Fidelity NFT #37",
+    "description": "Fidelity NFT colllection, created as Loyalty Program Solution, with Superpowered NFT and expiration Token",
+    "image": "ipfs://QmNtNgKcTdFhm945zFMgYNaKFH8YM3ZgK83yzvhztPstjp/37.png",
+    "edition": 37,
+    "attributes": [
+      { "trait_type": "prize", "value": "smart watch" },
+      { "trait_type": "style", "value": "monet style" },
+      { "trait_type": "platform", "value": "dall-e-2" },
+      {
+        "trait_type": "magic words",
+        "value": "Monet Style of a  hand wearing a Woman Watch"
+      },
+      { "trait_type": "retail price", "value": "700" },
+      { "trait_type": "FIDOS to mint", "value": "17500" }
+    ]
+  },
+  {
+    "name": "Fidelity NFT #38",
+    "description": "Fidelity NFT colllection, created as Loyalty Program Solution, with Superpowered NFT and expiration Token",
+    "image": "ipfs://QmNtNgKcTdFhm945zFMgYNaKFH8YM3ZgK83yzvhztPstjp/38.png",
+    "edition": 38,
+    "attributes": [
+      { "trait_type": "prize", "value": "smart watch" },
+      { "trait_type": "style", "value": "monet style" },
+      { "trait_type": "platform", "value": "dall-e-2" },
+      {
+        "trait_type": "magic words",
+        "value": "Monet Style of a  hand wearing a Woman Watch"
+      },
+      { "trait_type": "retail price", "value": "700" },
+      { "trait_type": "FIDOS to mint", "value": "17500" }
+    ]
+  },
+  {
+    "name": "Fidelity NFT #39",
+    "description": "Fidelity NFT colllection, created as Loyalty Program Solution, with Superpowered NFT and expiration Token",
+    "image": "ipfs://QmNtNgKcTdFhm945zFMgYNaKFH8YM3ZgK83yzvhztPstjp/39.png",
+    "edition": 39,
+    "attributes": [
+      { "trait_type": "prize", "value": "smart watch" },
+      { "trait_type": "style", "value": "monet style" },
+      { "trait_type": "platform", "value": "dall-e-2" },
+      {
+        "trait_type": "magic words",
+        "value": "Monet Style of a  hand wearing a Woman Watch"
+      },
+      { "trait_type": "retail price", "value": "700" },
+      { "trait_type": "FIDOS to mint", "value": "17500" }
+    ]
+  },
+  {
+    "name": "Fidelity NFT #40",
+    "description": "Fidelity NFT colllection, created as Loyalty Program Solution, with Superpowered NFT and expiration Token",
+    "image": "ipfs://QmNtNgKcTdFhm945zFMgYNaKFH8YM3ZgK83yzvhztPstjp/40.png",
+    "edition": 40,
+    "attributes": [
+      { "trait_type": "prize", "value": "smart watch" },
+      { "trait_type": "style", "value": "monet style" },
+      { "trait_type": "platform", "value": "dall-e-2" },
+      {
+        "trait_type": "magic words",
+        "value": "Monet Style of a  hand wearing a Woman Watch"
+      },
+      { "trait_type": "retail price", "value": "700" },
+      { "trait_type": "FIDOS to mint", "value": "17500" }
+    ]
+  },
+  {
+    "name": "Fidelity NFT #41",
+    "description": "Fidelity NFT colllection, created as Loyalty Program Solution, with Superpowered NFT and expiration Token",
+    "image": "ipfs://QmNtNgKcTdFhm945zFMgYNaKFH8YM3ZgK83yzvhztPstjp/41.png",
+    "edition": 41,
+    "attributes": [
+      { "trait_type": "prize", "value": "computer mouse" },
+      { "trait_type": "style", "value": "monet style" },
+      { "trait_type": "platform", "value": "dall-e-2" },
+      {
+        "trait_type": "magic words",
+        "value": "Monet Style of a Computer Mouse"
+      },
+      { "trait_type": "retail price", "value": "100" },
+      { "trait_type": "FIDOS to mint", "value": "2500" }
+    ]
+  },
+  {
+    "name": "Fidelity NFT #42",
+    "description": "Fidelity NFT colllection, created as Loyalty Program Solution, with Superpowered NFT and expiration Token",
+    "image": "ipfs://QmNtNgKcTdFhm945zFMgYNaKFH8YM3ZgK83yzvhztPstjp/42.png",
+    "edition": 42,
+    "attributes": [
+      { "trait_type": "prize", "value": "computer mouse" },
+      { "trait_type": "style", "value": "monet style" },
+      { "trait_type": "platform", "value": "dall-e-2" },
+      {
+        "trait_type": "magic words",
+        "value": "Monet Style of a Computer Mouse"
+      },
+      { "trait_type": "retail price", "value": "100" },
+      { "trait_type": "FIDOS to mint", "value": "2500" }
+    ]
+  },
+  {
+    "name": "Fidelity NFT #43",
+    "description": "Fidelity NFT colllection, created as Loyalty Program Solution, with Superpowered NFT and expiration Token",
+    "image": "ipfs://QmNtNgKcTdFhm945zFMgYNaKFH8YM3ZgK83yzvhztPstjp/43.png",
+    "edition": 43,
+    "attributes": [
+      { "trait_type": "prize", "value": "computer mouse" },
+      { "trait_type": "style", "value": "monet style" },
+      { "trait_type": "platform", "value": "dall-e-2" },
+      {
+        "trait_type": "magic words",
+        "value": "Monet Style of a Computer Mouse"
+      },
+      { "trait_type": "retail price", "value": "100" },
+      { "trait_type": "FIDOS to mint", "value": "2500" }
+    ]
+  },
+  {
+    "name": "Fidelity NFT #44",
+    "description": "Fidelity NFT colllection, created as Loyalty Program Solution, with Superpowered NFT and expiration Token",
+    "image": "ipfs://QmNtNgKcTdFhm945zFMgYNaKFH8YM3ZgK83yzvhztPstjp/44.png",
+    "edition": 44,
+    "attributes": [
+      { "trait_type": "prize", "value": "computer mouse" },
+      { "trait_type": "style", "value": "monet style" },
+      { "trait_type": "platform", "value": "dall-e-2" },
+      {
+        "trait_type": "magic words",
+        "value": "Monet Style of a Computer Mouse"
+      },
+      { "trait_type": "retail price", "value": "100" },
+      { "trait_type": "FIDOS to mint", "value": "2500" }
+    ]
+  },
+  {
+    "name": "Fidelity NFT #45",
+    "description": "Fidelity NFT colllection, created as Loyalty Program Solution, with Superpowered NFT and expiration Token",
+    "image": "ipfs://QmNtNgKcTdFhm945zFMgYNaKFH8YM3ZgK83yzvhztPstjp/45.png",
+    "edition": 45,
+    "attributes": [
+      { "trait_type": "prize", "value": "water bottle" },
+      { "trait_type": "style", "value": "picasso style" },
+      { "trait_type": "platform", "value": "dall-e-2" },
+      {
+        "trait_type": "magic words",
+        "value": "Picasso Style of a watter bottle inside a gym"
+      },
+      { "trait_type": "retail price", "value": "75" },
+      { "trait_type": "FIDOS to mint", "value": "1875" }
+    ]
+  },
+  {
+    "name": "Fidelity NFT #46",
+    "description": "Fidelity NFT colllection, created as Loyalty Program Solution, with Superpowered NFT and expiration Token",
+    "image": "ipfs://QmNtNgKcTdFhm945zFMgYNaKFH8YM3ZgK83yzvhztPstjp/46.png",
+    "edition": 46,
+    "attributes": [
+      { "trait_type": "prize", "value": "water bottle" },
+      { "trait_type": "style", "value": "picasso style" },
+      { "trait_type": "platform", "value": "dall-e-2" },
+      {
+        "trait_type": "magic words",
+        "value": "Picasso Style of a watter bottle inside a gym"
+      },
+      { "trait_type": "retail price", "value": "75" },
+      { "trait_type": "FIDOS to mint", "value": "1875" }
+    ]
+  },
+  {
+    "name": "Fidelity NFT #47",
+    "description": "Fidelity NFT colllection, created as Loyalty Program Solution, with Superpowered NFT and expiration Token",
+    "image": "ipfs://QmNtNgKcTdFhm945zFMgYNaKFH8YM3ZgK83yzvhztPstjp/47.png",
+    "edition": 47,
+    "attributes": [
+      { "trait_type": "prize", "value": "water bottle" },
+      { "trait_type": "style", "value": "picasso style" },
+      { "trait_type": "platform", "value": "dall-e-2" },
+      {
+        "trait_type": "magic words",
+        "value": "Picasso Style of a watter bottle inside a gym"
+      },
+      { "trait_type": "retail price", "value": "75" },
+      { "trait_type": "FIDOS to mint", "value": "1875" }
+    ]
+  },
+  {
+    "name": "Fidelity NFT #48",
+    "description": "Fidelity NFT colllection, created as Loyalty Program Solution, with Superpowered NFT and expiration Token",
+    "image": "ipfs://QmNtNgKcTdFhm945zFMgYNaKFH8YM3ZgK83yzvhztPstjp/48.png",
+    "edition": 48,
+    "attributes": [
+      { "trait_type": "prize", "value": "water bottle" },
+      { "trait_type": "style", "value": "picasso style" },
+      { "trait_type": "platform", "value": "dall-e-2" },
+      {
+        "trait_type": "magic words",
+        "value": "Picasso Style of a watter bottle inside a gym"
+      },
+      { "trait_type": "retail price", "value": "75" },
+      { "trait_type": "FIDOS to mint", "value": "1875" }
+    ]
+  },
+  {
+    "name": "Fidelity NFT #49",
+    "description": "Fidelity NFT colllection, created as Loyalty Program Solution, with Superpowered NFT and expiration Token",
+    "image": "ipfs://QmNtNgKcTdFhm945zFMgYNaKFH8YM3ZgK83yzvhztPstjp/49.png",
+    "edition": 49,
+    "attributes": [
+      { "trait_type": "prize", "value": "piano" },
+      { "trait_type": "style", "value": "ai generated" },
+      { "trait_type": "platform", "value": "dall-e-2" },
+      {
+        "trait_type": "magic words",
+        "value": "girl hands playing electric guitar and piano with sunflowers on picnic"
+      },
+      { "trait_type": "retail price", "value": "450" },
+      { "trait_type": "FIDOS to mint", "value": "11250" }
+    ]
+  },
+  {
+    "name": "Fidelity NFT #50",
+    "description": "Fidelity NFT colllection, created as Loyalty Program Solution, with Superpowered NFT and expiration Token",
+    "image": "ipfs://QmNtNgKcTdFhm945zFMgYNaKFH8YM3ZgK83yzvhztPstjp/50.png",
+    "edition": 50,
+    "attributes": [
+      { "trait_type": "prize", "value": "piano" },
+      { "trait_type": "style", "value": "ai generated" },
+      { "trait_type": "platform", "value": "dall-e-2" },
+      {
+        "trait_type": "magic words",
+        "value": "girl hands playing electric guitar and piano with sunflowers on picnic"
+      },
+      { "trait_type": "retail price", "value": "450" },
+      { "trait_type": "FIDOS to mint", "value": "11250" }
+    ]
+  },
+  {
+    "name": "Fidelity NFT #51",
+    "description": "Fidelity NFT colllection, created as Loyalty Program Solution, with Superpowered NFT and expiration Token",
+    "image": "ipfs://QmNtNgKcTdFhm945zFMgYNaKFH8YM3ZgK83yzvhztPstjp/51.png",
+    "edition": 51,
+    "attributes": [
+      { "trait_type": "prize", "value": "piano" },
+      { "trait_type": "style", "value": "ai generated" },
+      { "trait_type": "platform", "value": "dall-e-2" },
+      {
+        "trait_type": "magic words",
+        "value": "girl hands playing electric guitar and piano with sunflowers on picnic"
+      },
+      { "trait_type": "retail price", "value": "450" },
+      { "trait_type": "FIDOS to mint", "value": "11250" }
+    ]
+  },
+  {
+    "name": "Fidelity NFT #52",
+    "description": "Fidelity NFT colllection, created as Loyalty Program Solution, with Superpowered NFT and expiration Token",
+    "image": "ipfs://QmNtNgKcTdFhm945zFMgYNaKFH8YM3ZgK83yzvhztPstjp/52.png",
+    "edition": 52,
+    "attributes": [
+      { "trait_type": "prize", "value": "piano" },
+      { "trait_type": "style", "value": "ai generated" },
+      { "trait_type": "platform", "value": "dall-e-2" },
+      {
+        "trait_type": "magic words",
+        "value": "girl hands playing electric guitar and piano with sunflowers on picnic"
+      },
+      { "trait_type": "retail price", "value": "450" },
+      { "trait_type": "FIDOS to mint", "value": "11250" }
+    ]
+  }
+]
