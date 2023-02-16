@@ -11,7 +11,7 @@ const {
 
 var MINTER_ROLE = getRole("MINTER_ROLE");
 
-async function deployNftContract() {
+async function deployMumbaiContracts() {
   await console.log("🙏 Deploying Contracts");
   var relayerAddress = ethers.utils.getAddress("0x70f26499b849168744f4fb8fd8cce7b08c458e42");
   var ipfsCID = "QmSA58qFqb8m66e4vCWx6UcJAuq7Lt3zLU8EyGDXwDyCTc";
@@ -41,20 +41,49 @@ async function deployNftContract() {
   console.log("😀 Finished Contract Deployment");
 }
 
+
+async function deployBoth() {
+  await deployMumbaiContracts()
+    .catch((error) => {
+      console.error(error);
+      process.exitCode = 1;
+    });
+  await deployGoerliContracts()
+    .catch((error) => {
+      console.error(error);
+      process.exitCode = 1;
+    });
+}
+
+
+
 async function main() {
   var networkName = process.env.HARDHAT_NETWORK;
   if (!networkName) {
     console.log("🤡 Deploying to Local Hardhat");
+    deployBoth();
   }
   else {
     console.log(`💪 Deploying to: ${networkName}`);
+    if (networkName == "mumbai") {
+      deployMumbaiContracts()
+        .catch((error) => {
+          console.error(error);
+          process.exitCode = 1;
+        });
+    }
+    else if (networkName == "goerli") {
+      deployGoerliContracts()
+        .catch((error) => {
+          console.error(error);
+          process.exitCode = 1;
+        });
+    }
+    else {
+      console.log("Not deployable contract for this network.");
+    }
   }
-  deployNftContract()
-  .catch((error) => {
-    console.error(error);
-    process.exitCode = 1;
-  });
-}
+  }
 
 // We recommend this pattern to be able to use async/await everywhere
 // and properly handle errors.
