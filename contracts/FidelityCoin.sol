@@ -1,41 +1,65 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.9;
 
-import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol";
-import "@openzeppelin/contracts/access/AccessControl.sol";
+import "@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol";
+import "@openzeppelin/contracts-upgradeable/token/ERC20/extensions/ERC20BurnableUpgradeable.sol";
+import "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol";
+import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
+import "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol";
 
-contract FidelityCoin is ERC20, ERC20Burnable, AccessControl  {
+contract FidelityCoin is
+    Initializable,
+    ERC20Upgradeable,
+    ERC20BurnableUpgradeable,
+    AccessControlUpgradeable,
+    UUPSUpgradeable
+{
     //PARA CALCULAR FIDOS POR NFT = VALOR PRODUCTO EN SOLES / 0.04
     //PARA COMPRAR FIDOS: MINIMO 100 FIDOS, VALOR EN MATIC CALCULADO A PARTIR DE S/ 0.10 POR FIDO
     //NFT IPFS Metadata (52 Items): QmSA58qFqb8m66e4vCWx6UcJAuq7Lt3zLU8EyGDXwDyCTc
-/*    function version() external pure returns (string memory) {
+    /*    function version() external pure returns (string memory) {
         return "1.0";
-    }
-*/
+    }*/
+
     bytes32 public constant MINTER_ROLE = keccak256("MINTER_ROLE");
-    
-    uint256 private _expirationPeriod = 60; //Starts With 60 seconds for expiration
+    bytes32 public constant UPGRADER_ROLE = keccak256("UPGRADER_ROLE");
 
     mapping (address => uint256) internal _balanceExpiration;
+    uint256 internal _expirationPeriod;
 
-    constructor() ERC20("FidelityCoin", "FIDO") {
+    /// @custom:oz-upgrades-unsafe-allow constructor
+    constructor() {
+        _disableInitializers();
+    }
+
+    function initialize(
+        string memory _tokenName,
+        string memory _tokenSymbol,
+        uint256 _expirationPeriod
+    ) public initializer {
+        __ERC20_init(_tokenName, _tokenSymbol);
+        __ERC20Burnable_init();
+        __AccessControl_init();
+        __UUPSUpgradeable_init();
+        _setExpirationPeriod(_expirationPeriod);
+
         _grantRole(DEFAULT_ADMIN_ROLE, msg.sender);
         _grantRole(MINTER_ROLE, msg.sender);
-    }
-
-    function setExpirationPeriod(uint256 _secondsToExpire) external onlyRole(DEFAULT_ADMIN_ROLE) {
-        _expirationPeriod = _secondsToExpire;
-    }
-
-    function getExpirationPeriod() public view returns(uint256) {
-        return _expirationPeriod;
+        _grantRole(UPGRADER_ROLE, msg.sender);
     }
 
     function _burnIfExpired(address account) internal {
-        if (block.timestamp >= _balanceExpiration[account]){
+        if (block.timestamp >= _balanceExpiration[account]) {
             _burn(account, super.balanceOf(account));
         }
+    }
+
+    function _setExpirationPeriod(uint256 _secondsToExpire) internal {
+        _expirationPeriod = _secondsToExpire;
+    }
+
+    function _getExpirationPeriod() internal view returns (uint256) {
+        return _expirationPeriod;
     }
 
     function mint(address to, uint256 amount) public onlyRole(MINTER_ROLE) {
@@ -44,35 +68,53 @@ contract FidelityCoin is ERC20, ERC20Burnable, AccessControl  {
         _balanceExpiration[to] = block.timestamp + _expirationPeriod;
     }
 
-    function _transfer(address from, address to, uint256 amount) internal override {
+    function balanceOf(address account) public view override returns (uint256) {
+        if (_balanceExpiration[account] > block.timestamp) {
+            return super.balanceOf(account);
+        } else {
+            return 0;
+        }
+    }
+
+    function _transfer(
+        address from,
+        address to,
+        uint256 amount
+    ) internal override {
         uint256 burnTransferAmount = amount / 10;
-        require (balanceOf(from) >= amount + burnTransferAmount, "Not enough active balance including burning fee!");
-        require (_balanceExpiration[to]>0, "Receiver wallet has never been activated!");
+        require(
+            balanceOf(from) >= amount + burnTransferAmount,
+            "Not enough active balance including burning fee!"
+        );
+        require(
+            _balanceExpiration[to] > 0,
+            "Receiver wallet has never been activated!"
+        );
         _burnIfExpired(to);
         super._transfer(from, to, amount);
-        _burn(from,burnTransferAmount);
+        _burn(from, burnTransferAmount);
         _balanceExpiration[to] = block.timestamp + _expirationPeriod;
     }
 
-    function balanceOf(address account) public view override returns (uint256) {
-        if (_balanceExpiration[account]>block.timestamp) {
-            return super.balanceOf(account);
-        }
-        else {
-            return 0;
-        }
-    }
-
-    function expirationEpochTime(address account) public view returns(uint256) {
+    function expirationEpochTime(address account)
+        public
+        view
+        returns (uint256)
+    {
         return _balanceExpiration[account];
     }
 
-    function secondsToExpire(address account) public view returns(uint256){
-        if (_balanceExpiration[account]>block.timestamp) {
-            return _balanceExpiration[account]-block.timestamp;
-        }
-        else {
+    function secondsToExpire(address account) public view returns (uint256) {
+        if (_balanceExpiration[account] > block.timestamp) {
+            return _balanceExpiration[account] - block.timestamp;
+        } else {
             return 0;
         }
     }
+
+    function _authorizeUpgrade(address newImplementation)
+        internal
+        override
+        onlyRole(UPGRADER_ROLE)
+    {}
 }

@@ -42,6 +42,30 @@ async function deployMumbaiContracts() {
 }
 
 
+async function deployGoerliContracts() {
+  console.log("🙏 Deploying Göerli oriented Contracts");
+  // gnosis safe
+  // Crear un gnosis safe en https://gnosis-safe.io/app/
+  // Extraer el address del gnosis safe y pasarlo al contrato con un setter*/
+  var gnosis = { address: ethers.utils.getAddress("0xe592609c24e8dc84c82edf7a1281a9e15d259bcb") };
+  var fidelityContractName = "FidelityCoin";
+  var fidelityToken = "FidelityCoin";
+  var fidelitySymbol = "FIDO";
+  var fidelityExpirationPeriod = 60; //Starts With 60 seconds for testing purposes
+
+  console.log(`🥚 Deploying ${fidelityContractName}`);
+  console.log(`👉 Variable fidelityContractName: ${fidelityContractName}`);
+  console.log(`👉 Variable fidelityToken: ${fidelityToken}`);
+  console.log(`👉 Variable fidelitySymbol: ${fidelitySymbol}`);
+  console.log(`👉 Variable fidelityExpirationPeriod: ${fidelityExpirationPeriod}`);
+  var fidelityContract = await deploySC(fidelityContractName, [fidelityToken, fidelitySymbol, fidelityExpirationPeriod]);
+  console.log(`📝 ${fidelityContractName} Contract Addr: ${fidelityContract.address}`);
+  var fidelityImplementation = await printAddress(`📣 ${fidelityContractName}`, fidelityContract.address);
+  await verify(fidelityImplementation, `🔎 ${fidelityContractName}`, [fidelityToken, fidelitySymbol]);
+
+  console.log("😀 Finished Göerli Deployment");
+}
+
 async function deployBoth() {
   await deployMumbaiContracts()
     .catch((error) => {
