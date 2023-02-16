@@ -12,7 +12,7 @@ contract FidelityCoin is ERC20, ERC20Burnable, AccessControl  {
 
     mapping (address => uint256) internal _balanceExpiration;
 
-    constructor() ERC20("Fidelicoin", "FIDO") {
+    constructor() ERC20("FidelityCoin", "FIDO") {
         _grantRole(DEFAULT_ADMIN_ROLE, msg.sender);
         _grantRole(MINTER_ROLE, msg.sender);
     }
