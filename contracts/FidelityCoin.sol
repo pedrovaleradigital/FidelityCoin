@@ -6,6 +6,8 @@ import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol";
 import "@openzeppelin/contracts/access/AccessControl.sol";
 
 contract FidelityCoin is ERC20, ERC20Burnable, AccessControl  {
+    //PARA CALCULAR FIDOS POR NFT = VALOR PRODUCTO EN SOLES / 0.04
+    //PARA COMPRAR FIDOS: MINIMO 100 FIDOS, VALOR EN MATIC CALCULADO A PARTIR DE S/ 0.10 POR FIDO
     bytes32 public constant MINTER_ROLE = keccak256("MINTER_ROLE");
     
     uint256 private _expirationPeriod = 60; //Starts With 60 seconds for expiration

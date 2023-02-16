@@ -46,7 +46,7 @@ contract FidelityNFT is
     bytes32 public constant UPGRADER_ROLE = keccak256("UPGRADER_ROLE");
 
     string ipfsCID;
-    string lastNftId;
+    uint256 lastNftId;
 
     /// @custom:oz-upgrades-unsafe-allow constructor
     constructor() {
