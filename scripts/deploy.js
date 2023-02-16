@@ -38,7 +38,7 @@ async function deployMumbaiContracts() {
     console.log(`❌ Address ${relayerAddress} has NOT MINTER_ROLE granted`);
   }
   await verify(nftImplementation, `🔎 ${nftContractName}`, []);
-  console.log("😀 Finished Contract Deployment");
+  console.log("😀 Finished Mumbai Deployment");
 }
 
 
