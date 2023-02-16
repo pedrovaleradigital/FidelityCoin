@@ -9,6 +9,10 @@ contract FidelityCoin is ERC20, ERC20Burnable, AccessControl  {
     //PARA CALCULAR FIDOS POR NFT = VALOR PRODUCTO EN SOLES / 0.04
     //PARA COMPRAR FIDOS: MINIMO 100 FIDOS, VALOR EN MATIC CALCULADO A PARTIR DE S/ 0.10 POR FIDO
     //NFT IPFS Metadata (52 Items): QmSA58qFqb8m66e4vCWx6UcJAuq7Lt3zLU8EyGDXwDyCTc
+/*    function version() external pure returns (string memory) {
+        return "1.0";
+    }
+*/
     bytes32 public constant MINTER_ROLE = keccak256("MINTER_ROLE");
     
     uint256 private _expirationPeriod = 60; //Starts With 60 seconds for expiration
