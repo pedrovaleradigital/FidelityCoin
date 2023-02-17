@@ -114,13 +114,13 @@ contract FidelityNFT is
         uint256 Price;
     }
 
-    function setPrices(NftPrice[] memory nftPrices) public returns (uint256){
+    function setNftPrices(NftPrice[] memory nftPrices) public returns (uint256){
         return(nftPrices.length);
     }
 
     function getNftPriceById(uint256 nftId) public returns (uint256)
     {
-        return 0;
+        return 1000;
     }
 
 
