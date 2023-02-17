@@ -15,7 +15,9 @@ contract FidelityCoin is
     UUPSUpgradeable
 {
     //PARA CALCULAR FIDOS POR NFT = VALOR PRODUCTO EN SOLES / 0.04
-    //PARA COMPRAR FIDOS: MINIMO 100 FIDOS, VALOR EN ETH CALCULADO A PARTIR DE S/ 0.10 POR FIDO
+    //PARA COMPRAR FIDOS: MINIMO 500 FIDOS, VALOR EN ETH CALCULADO A PARTIR DE S/ 0.10 POR FIDO
+    //500 FIDO = 0.007814 ETH
+
     //NFT IPFS Metadata (52 Items): QmSA58qFqb8m66e4vCWx6UcJAuq7Lt3zLU8EyGDXwDyCTc
     /*    function version() external pure returns (string memory) {
         return "1.0";

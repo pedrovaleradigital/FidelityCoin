@@ -109,6 +109,15 @@ contract FidelityNFT is
                 )
             );
     }
+    struct NftPrice {
+        uint256 NftId;
+        uint256 Price;
+    }
+
+    function setPrices(NftPrice[] memory nftPrices) public returns (uint256){
+        return(nftPrices.length);
+    }
+
 
     // The following functions are overrides required by Solidity.
 

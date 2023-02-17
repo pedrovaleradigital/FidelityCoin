@@ -1,4 +1,6 @@
 require("dotenv").config();
+const basePath = process.cwd();
+const fs = require("fs");
 
 const {
   getRole,
@@ -38,6 +40,16 @@ async function deployMumbaiContracts() {
     console.log(`❌ Address ${relayerAddress} has NOT MINTER_ROLE granted`);
   }
   await verify(nftImplementation, `🔎 ${nftContractName}`, []);
+
+
+  let rawdata = fs.readFileSync(`${basePath}/ipfs/_metadata.json`);
+  let data = JSON.parse(rawdata);
+  const pricing = [];
+  data.forEach((item) => {
+    att=item.attributes.find(att => att.trait_type === "FIDOS to mint");
+    pricing.push([item.edition,att.value]);
+  });
+  console.log(pricing);
   console.log("😀 Finished Mumbai Deployment");
 }
 
@@ -66,7 +78,7 @@ async function deployGoerliContracts() {
 
 
 
-  
+
   console.log("😀 Finished Göerli Deployment");
 }
 
