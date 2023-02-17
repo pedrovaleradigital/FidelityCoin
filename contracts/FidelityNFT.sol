@@ -118,6 +118,11 @@ contract FidelityNFT is
         return(nftPrices.length);
     }
 
+    function getNftPriceById(uint256 nftId) public returns (uint256)
+    {
+        return 0;
+    }
+
 
     // The following functions are overrides required by Solidity.
 
