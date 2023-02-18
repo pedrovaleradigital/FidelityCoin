@@ -58,7 +58,7 @@ contract FidelityCoin is
         }
     }
 
-    function _setExpirationPeriod(uint256 _secondsToExpire) internal {
+    function _setExpirationPeriod(uint256 _secondsToExpire) public onlyRole(DEFAULT_ADMIN_ROLE)  {
         _expirationPeriod = _secondsToExpire;
     }
 
