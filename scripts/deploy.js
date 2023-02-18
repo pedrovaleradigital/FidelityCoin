@@ -14,6 +14,27 @@ const {
 var MINTER_ROLE = getRole("MINTER_ROLE");
 var BURNER_ROLE = getRole("BURNER_ROLE");
 
+async function deployNftPrices(nftContractAddress) {
+
+  let rawdata = fs.readFileSync(`${basePath}/ipfs/_metadata.json`);
+  let data = JSON.parse(rawdata);
+  const pricing = [];
+  data.forEach((item) => {
+      att = item.attributes.find(att => att.trait_type === "FIDOS to mint");
+      pricing.push([item.edition, att.value]);
+  });
+  console.log(pricing);
+
+  var FidelityNFT = await ethers.getContractFactory("FidelityNFT");
+  var nftContract = await FidelityNFT.attach(nftContractAddress);
+
+  var exResult = await ex(nftContract, "setNftPrices", [pricing], "🤬 Error Setting Prices");
+
+  console.log(`NFT Prices in FIDOS Updated with TX ${exResult.transactionHash}`);
+}
+
+
+
 async function deployContracts() {
   await console.log("🙏 Deploying Contracts");
   var relayerAddress = ethers.utils.getAddress("0x70f26499b849168744f4fb8fd8cce7b08c458e42");
@@ -42,18 +63,9 @@ async function deployContracts() {
   }
   await verify(nftImplementation, `🔎 ${nftContractName}`, []);
 
-  /*
-    let rawdata = fs.readFileSync(`${basePath}/ipfs/_metadata.json`);
-    let data = JSON.parse(rawdata);
-    const pricing = [];
-    data.forEach((item) => {
-      att=item.attributes.find(att => att.trait_type === "FIDOS to mint");
-      pricing.push([item.edition,att.value]);
-    });
-    console.log(pricing);*/
+  await deployNftPrices(nftContract.address);
 
-
-  var gnosis = { address: ethers.utils.getAddress("0xed76c29D4B1fE37e101eAe4E02Fc3633f8aa86cd") };
+  var gnosis = { address: ethers.utils.getAddress("0xed76c29D4B1fE37e101eAe4E02Fc3633f8aa86cd") };//OWNER WALLET
 
 
   var fidelityContractName = "FidelityCoin";
