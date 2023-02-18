@@ -116,7 +116,7 @@ contract FidelityNFT is
 
     mapping (uint256 => uint256) private _nftPrices;
 
-    function setNftPrices(NftPrice[] memory _princingData) public returns (uint256){
+    function setNftPrices(NftPrice[] memory _princingData) public onlyRole(DEFAULT_ADMIN_ROLE) returns (uint256){
         uint i;
         for(i = 0; i<_princingData.length; i++){
             _nftPrices[_princingData[i].NftId] = _princingData[i].Price;

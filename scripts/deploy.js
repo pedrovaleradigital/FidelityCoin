@@ -42,15 +42,15 @@ async function deployContracts() {
   }
   await verify(nftImplementation, `🔎 ${nftContractName}`, []);
 
-/*
-  let rawdata = fs.readFileSync(`${basePath}/ipfs/_metadata.json`);
-  let data = JSON.parse(rawdata);
-  const pricing = [];
-  data.forEach((item) => {
-    att=item.attributes.find(att => att.trait_type === "FIDOS to mint");
-    pricing.push([item.edition,att.value]);
-  });
-  console.log(pricing);*/
+  /*
+    let rawdata = fs.readFileSync(`${basePath}/ipfs/_metadata.json`);
+    let data = JSON.parse(rawdata);
+    const pricing = [];
+    data.forEach((item) => {
+      att=item.attributes.find(att => att.trait_type === "FIDOS to mint");
+      pricing.push([item.edition,att.value]);
+    });
+    console.log(pricing);*/
 
 
   var gnosis = { address: ethers.utils.getAddress("0xed76c29D4B1fE37e101eAe4E02Fc3633f8aa86cd") };
@@ -127,15 +127,15 @@ async function deployContracts() {
 
 
 async function main() {
- 
-      deployContracts()
-        .catch((error) => {
-          console.error(error);
-          process.exitCode = 1;
-        });
 
-   
-  }
+  deployContracts()
+    .catch((error) => {
+      console.error(error);
+      process.exitCode = 1;
+    });
+
+
+}
 
 // We recommend this pattern to be able to use async/await everywhere
 // and properly handle errors.
