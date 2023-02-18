@@ -1,13 +1,830 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <title>Webpack App</title>
-    </head>
-    <body>
-        <h1>Hello world!</h1>
-        <h2>Tip: Check your console</h2>
+<html lang="en">
 
-    </body>
+<head>
+    <meta charset="utf-8">
+    <title>EShopper - Bootstrap Shop Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="/assets/img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="/assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="/assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid">
+        <div class="row bg-secondary py-2 px-xl-5">
+            <div class="col-lg-6 d-none d-lg-block">
+                <div class="d-inline-flex align-items-center">
+                    <a class="text-dark" href="">FAQs</a>
+                    <span class="text-muted px-2">|</span>
+                    <a class="text-dark" href="">Help</a>
+                    <span class="text-muted px-2">|</span>
+                    <a class="text-dark" href="">Support</a>
+                </div>
+            </div>
+            <div class="col-lg-6 text-center text-lg-right">
+                <div class="d-inline-flex align-items-center">
+                    <a class="text-dark px-2" href="">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a class="text-dark px-2" href="">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a class="text-dark px-2" href="">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a class="text-dark px-2" href="">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a class="text-dark pl-2" href="">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row align-items-center py-3 px-xl-5">
+            <div class="col-lg-3 d-none d-lg-block">
+                <a href="" class="text-decoration-none">
+                    <h1 class="m-0 display-5 font-weight-semi-bold"><span
+                            class="text-primary font-weight-bold border px-3 mr-1">L</span>oyaltyCoin</h1>
+                </a>
+            </div>
+            <div class="col-lg-6 col-6 text-left">
+                <form action="">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Buscar Producto">
+                        <div class="input-group-append">
+                            <span id="test" class="input-group-text bg-transparent text-primary">
+                                <i class="fa fa-search"></i>
+                            </span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-3 col-6 text-right">
+                <a href="" class="btn border">
+                    <i class="fas fa-heart text-primary"></i>
+                    <span class="badge">0</span>
+                </a>
+                <a href="" class="btn border">
+                    <i class="fas fa-shopping-cart text-primary"></i>
+                    <span class="badge">0</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid">
+        <div class="row border-top px-xl-5">
+            <div class="col-lg-3 d-none d-lg-block">
+                <a class="btn shadow-none d-flex align-items-center justify-content-between bg-primary text-white w-100"
+                    data-toggle="collapse" href="#navbar-vertical"
+                    style="height: 65px; margin-top: -1px; padding: 0 30px;">
+                    <h6 class="m-0">Categorias</h6>
+                    <i id="list_hidden" class="fa fa-angle-down text-dark"></i>
+                </a>
+                <nav class="collapse position-absolute navbar navbar-vertical navbar-light align-items-start p-0 border border-top-0 border-bottom-0 bg-light"
+                    id="navbar-vertical" style="width: calc(100% - 30px); z-index: 1;">
+                    <div class="navbar-nav w-100 overflow-hidden" style="height: 410px">
+
+                        <a id="option_productos" href="javascript:void(0)" class="nav-item nav-link">Productos</a>
+                        <a id="option_balance" href="javascript:void(0)" class="nav-item nav-link">Ver Balance</a>
+                        <a id="option_minters" href="javascript:void(0)" class="nav-item nav-link">Administracion de Minters</a>
+                        <a id="option_transferir" href="javascript:void(0)" class="nav-item nav-link">Transferir Fidelicoins</a>
+                        <a id="option_canje" href="javascript:void(0)" class="nav-item nav-link">Catalogo y Canje de NFTs</a>
+                        <a id="option_compra_fidelicoin" href="javascript:void(0)" class="nav-item nav-link">Compra de Fidelicoins</a>
+                    </div>
+                </nav>
+            </div>
+
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Page Header Start -->
+    <div class="container-fluid bg-secondary mb-5">
+        <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 300px">
+            <h1 class="font-weight-semi-bold text-uppercase mb-3" id="tittle_list">Productos</h1>
+            <div class="d-inline-flex">
+                <p class="m-0"><a href="">Home</a></p>
+                <p class="m-0 px-2">-</p>
+                <p class="m-0">Shop Detail</p>
+            </div>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+
+    <!-- Shop Detail Start -->
+    <div class="container-fluid py-5" id="contenedor_product">
+        <div class="row px-xl-5">
+            <div class="col-lg-5 pb-5">
+                <div id="product-carousel" class="carousel slide" data-ride="carousel">
+                    <img id="img_product_top" class="w-100 h-100" src="/assets/img/product-4.jpg" alt="Image">
+
+                </div>
+            </div>
+
+            <div class="col-lg-7 pb-5">
+                <h3 id="nombre_product_top" class="font-weight-semi-bold">Colorful Stylish Shirt</h3>
+                <!-- <div class="d-flex mb-3">
+                    <div class="text-primary mr-2">
+                        <small class="fas fa-star"></small>
+                        <small class="fas fa-star"></small>
+                        <small class="fas fa-star"></small>
+                        <small class="fas fa-star-half-alt"></small>
+                        <small class="far fa-star"></small>
+                    </div>
+                    <small class="pt-1">(50 Reviews)</small>
+                </div> -->
+                <h3 id="precio_product_top" class="font-weight-semi-bold mb-4">$150.00</h3>
+                <p class="mb-4">Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit clita
+                    ea. Sanc invidunt ipsum et, labore clita lorem magna lorem ut. Erat lorem duo dolor no sea nonumy.
+                    Accus labore stet, est lorem sit diam sea et justo, amet at lorem et eirmod ipsum diam et rebum kasd
+                    rebum.</p>
+                <div class="d-flex mb-3">
+                    <p class="text-dark font-weight-medium mb-0 mr-3">Sizes:</p>
+                    <form>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" id="size-1" name="size">
+                            <label class="custom-control-label" for="size-1">XS</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" id="size-2" name="size">
+                            <label class="custom-control-label" for="size-2">S</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" id="size-3" name="size">
+                            <label class="custom-control-label" for="size-3">M</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" id="size-4" name="size">
+                            <label class="custom-control-label" for="size-4">L</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" id="size-5" name="size">
+                            <label class="custom-control-label" for="size-5">XL</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="d-flex mb-4">
+                    <p class="text-dark font-weight-medium mb-0 mr-3">Colors:</p>
+                    <form>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" id="color-1" name="color">
+                            <label class="custom-control-label" for="color-1">Black</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" id="color-2" name="color">
+                            <label class="custom-control-label" for="color-2">White</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" id="color-3" name="color">
+                            <label class="custom-control-label" for="color-3">Red</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" id="color-4" name="color">
+                            <label class="custom-control-label" for="color-4">Blue</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" class="custom-control-input" id="color-5" name="color">
+                            <label class="custom-control-label" for="color-5">Green</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="d-flex align-items-center mb-4 pt-2">
+                    <div class="input-group quantity mr-3" style="width: 130px;">
+                        <div class="input-group-btn">
+                            <button class="btn btn-primary btn-minus">
+                                <i class="fa fa-minus"></i>
+                            </button>
+                        </div>
+                        <input type="text" class="form-control bg-secondary text-center" value="1">
+                        <div class="input-group-btn">
+                            <button class="btn btn-primary btn-plus">
+                                <i class="fa fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary px-3"><i class="fa fa-shopping-cart mr-1"></i> Comprar</button>
+                </div>
+                <div class="d-flex pt-2">
+                    <p class="text-dark font-weight-medium mb-0 mr-2">Share on:</p>
+                    <div class="d-inline-flex">
+                        <a class="text-dark px-2" href="">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a class="text-dark px-2" href="">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a class="text-dark px-2" href="">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a class="text-dark px-2" href="">
+                            <i class="fab fa-pinterest"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row px-xl-5">
+            <div class="col">
+                <div class="nav nav-tabs justify-content-center border-secondary mb-4">
+                    <a class="nav-item nav-link active" data-toggle="tab" href="#tab-pane-1">Description</a>
+                    <a class="nav-item nav-link" data-toggle="tab" href="#tab-pane-2">Information</a>
+
+                </div>
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="tab-pane-1">
+                        <h4 class="mb-3">Product Description</h4>
+                        <p>Eos no lorem eirmod diam diam, eos elitr et gubergren diam sea. Consetetur vero aliquyam
+                            invidunt duo dolores et duo sit. Vero diam ea vero et dolore rebum, dolor rebum eirmod
+                            consetetur invidunt sed sed et, lorem duo et eos elitr, sadipscing kasd ipsum rebum diam.
+                            Dolore diam stet rebum sed tempor kasd eirmod. Takimata kasd ipsum accusam sadipscing, eos
+                            dolores sit no ut diam consetetur duo justo est, sit sanctus diam tempor aliquyam eirmod
+                            nonumy rebum dolor accusam, ipsum kasd eos consetetur at sit rebum, diam kasd invidunt
+                            tempor lorem, ipsum lorem elitr sanctus eirmod takimata dolor ea invidunt.</p>
+                        <p>Dolore magna est eirmod sanctus dolor, amet diam et eirmod et ipsum. Amet dolore tempor
+                            consetetur sed lorem dolor sit lorem tempor. Gubergren amet amet labore sadipscing clita
+                            clita diam clita. Sea amet et sed ipsum lorem elitr et, amet et labore voluptua sit rebum.
+                            Ea erat sed et diam takimata sed justo. Magna takimata justo et amet magna et.</p>
+                    </div>
+                    <div class="tab-pane fade" id="tab-pane-2">
+                        <h4 class="mb-3">Additional Information</h4>
+                        <p>Eos no lorem eirmod diam diam, eos elitr et gubergren diam sea. Consetetur vero aliquyam
+                            invidunt duo dolores et duo sit. Vero diam ea vero et dolore rebum, dolor rebum eirmod
+                            consetetur invidunt sed sed et, lorem duo et eos elitr, sadipscing kasd ipsum rebum diam.
+                            Dolore diam stet rebum sed tempor kasd eirmod. Takimata kasd ipsum accusam sadipscing, eos
+                            dolores sit no ut diam consetetur duo justo est, sit sanctus diam tempor aliquyam eirmod
+                            nonumy rebum dolor accusam, ipsum kasd eos consetetur at sit rebum, diam kasd invidunt
+                            tempor lorem, ipsum lorem elitr sanctus eirmod takimata dolor ea invidunt.</p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item px-0">
+                                        Sit erat duo lorem duo ea consetetur, et eirmod takimata.
+                                    </li>
+                                    <li class="list-group-item px-0">
+                                        Amet kasd gubergren sit sanctus et lorem eos sadipscing at.
+                                    </li>
+                                    <li class="list-group-item px-0">
+                                        Duo amet accusam eirmod nonumy stet et et stet eirmod.
+                                    </li>
+                                    <li class="list-group-item px-0">
+                                        Takimata ea clita labore amet ipsum erat justo voluptua. Nonumy.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item px-0">
+                                        Sit erat duo lorem duo ea consetetur, et eirmod takimata.
+                                    </li>
+                                    <li class="list-group-item px-0">
+                                        Amet kasd gubergren sit sanctus et lorem eos sadipscing at.
+                                    </li>
+                                    <li class="list-group-item px-0">
+                                        Duo amet accusam eirmod nonumy stet et et stet eirmod.
+                                    </li>
+                                    <li class="list-group-item px-0">
+                                        Takimata ea clita labore amet ipsum erat justo voluptua. Nonumy.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row" id="list_productos">
+            </div>
+        </div>
+
+    </div>
+    <!-- Shop Detail End -->
+
+    <div class="container-fluid py-5" id="contenedor_balance" style="display: none;">
+    </div>
+
+    <div class="container-fluid py-5" id="contenedor_minters" style="display: none;">
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card" style="max-width: 420px;">
+                    <img class="card-img-top" src="/assets/img/Falabella.png" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">Falabella</h5>
+                      <a class="btn btn-primary">Revoke</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card" style="max-width: 420px;">
+                        <img class="card-img-top" src="/assets/img/Prima.png" alt="Card image cap">
+                        <div class="card-body">
+                          <h5 class="card-title">Prima</h5>
+                          <a class="btn btn-primary">Revoke</a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card" style="max-width: 420px;">
+                            <img class="card-img-top" src="/assets/img/Linio.png" alt="Card image cap">
+                            <div class="card-body">
+                              <h5 class="card-title">Linio</h5>
+                              <a class="btn btn-primary">Revoke</a>
+                            </div>
+                          </div>
+                        </div>
+
+        </div>
+
+    </div>
     
+
+    <div class="container-fluid py-5" id="contenedor_transferir" style="display: none;">
+
+        <div class="card bg-light mb-5" style="">
+            <div class="card-header"><a class="btn btn-primary">Connect</a></div>
+            <div class="card-body">
+              <h5 class="card-title">Mi Balance: ##########</h5>
+              <p class="card-text">To: ##########.</p>
+              <a class="btn btn-primary">Transferir</a><br>
+            </div>
+          </div>
+ 
+
+
+    </div>
+
+    <div class="container-fluid py-5" id="contenedor_canje" style="display: none;">
+        <div class="card-header"><a class="btn btn-primary">Connect</a></div>
+
+        <div class="row" id="list_canjes">
+        </div>
+    </div>
+
+    <div class="container-fluid py-5" id="contenedor_compra" style="display: none;">
+
+        <div class="card bg-light mb-5" style="">
+            <div class="card-header"><b>Compra Fidelicoins&nbsp;&nbsp;</b><a class="btn btn-primary">Conect</a></div>
+            <div class="card-body">
+              <h5 class="card-title">Minimo 20 Fidelicoins</h5>
+              <p class="card-text" style="font-weight: bold;">Cotizado 1.5 MATIC</p>
+              <a class="btn btn-primary">Comprar con Matic</a><br>
+            </div>
+          </div>
+ 
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Back to Top -->
+    <a id="button_top" href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/lib/easing/easing.min.js"></script>
+    <script src="/assets/lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="/assets/mail/jqBootstrapValidation.min.js"></script>
+    <script src="/assets/mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="/assets/js/main.js"></script>
+
+    <script>
+
+//                         <a id="option_productos" href="javascript:void(0)" class="nav-item nav-link">Productos</a>
+//                         <a id="option_balance" href="javascript:void(0)" class="nav-item nav-link">Ver Balance</a>
+//                         <a id="option_minters" href="javascript:void(0)" class="nav-item nav-link">Administracion de Minters</a>
+//                         <a id="option_transferir" href="javascript:void(0)" class="nav-item nav-link">Transferir Fidelicoins</a>
+//                         <a id="option_canje" href="javascript:void(0)" class="nav-item nav-link">Catalogo y Canje de NFTs</a>
+//                         <a id="option_compra_fidelicoin" href="javascript:void(0)" class="nav-item nav-link">Compra de Fidelicoins</a>
+
+
+$("#option_productos").click(function(){
+    $("#list_hidden").click();
+    $("#tittle_list").text("Productos");
+    $("#contenedor_product").attr("style","");
+    $("#contenedor_balance").attr("style","display:none");
+    $("#contenedor_minters").attr("style","display:none");
+    $("#contenedor_transferir").attr("style","display:none");
+    $("#contenedor_canje").attr("style","display:none");
+    $("#contenedor_compra").attr("style","display:none");
+});
+
+$("#option_balance").click(function(){
+    $("#list_hidden").click();
+    $("#tittle_list").text("Ver Balance");
+    $("#contenedor_product").attr("style","display:none");
+    $("#contenedor_balance").attr("style","");
+    $("#contenedor_minters").attr("style","display:none");
+    $("#contenedor_transferir").attr("style","display:none");
+    $("#contenedor_canje").attr("style","display:none");
+    $("#contenedor_compra").attr("style","display:none");
+});
+
+$("#option_minters").click(function(){
+    $("#list_hidden").click();
+    $("#tittle_list").text("Administracion de Minters");
+    $("#contenedor_product").attr("style","display:none");
+    $("#contenedor_balance").attr("style","display:none");
+    $("#contenedor_minters").attr("style","");
+    $("#contenedor_transferir").attr("style","display:none");
+    $("#contenedor_canje").attr("style","display:none");
+    $("#contenedor_compra").attr("style","display:none");
+});
+
+$("#option_transferir").click(function(){
+    $("#list_hidden").click();
+    $("#tittle_list").text("Transferir Fidelicoins");
+    $("#contenedor_product").attr("style","display:none");
+    $("#contenedor_balance").attr("style","display:none");
+    $("#contenedor_minters").attr("style","display:none");
+    $("#contenedor_transferir").attr("style","");
+    $("#contenedor_canje").attr("style","display:none");
+    $("#contenedor_compra").attr("style","display:none");
+});
+
+$("#option_canje").click(function(){
+    $("#list_hidden").click();
+    $("#tittle_list").text("Catalogo y Canje de NFTs");
+    $("#contenedor_product").attr("style","display:none");
+    $("#contenedor_balance").attr("style","display:none");
+    $("#contenedor_minters").attr("style","display:none");
+    $("#contenedor_transferir").attr("style","display:none");
+    $("#contenedor_canje").attr("style","");
+    $("#contenedor_compra").attr("style","display:none");
+});
+
+$("#option_compra_fidelicoin").click(function(){
+    $("#list_hidden").click();
+    $("#tittle_list").text("Compra de Fidelicoins");
+    $("#contenedor_product").attr("style","display:none");
+    $("#contenedor_balance").attr("style","display:none");
+    $("#contenedor_minters").attr("style","display:none");
+    $("#contenedor_transferir").attr("style","display:none");
+    $("#contenedor_canje").attr("style","display:none");
+    $("#contenedor_compra").attr("style","");
+});
+
+        var carros = [
+            {
+                "id": 1,
+                "nombre": "Colorful Stylish Shirt",
+                "precio": "$121.00",
+                "url_img": "/assets/img/product-1.jpg"
+            },
+            {
+                "id": 2,
+                "nombre": "Colorful Stylish Shirt",
+                "precio": "$122.00",
+                "url_img": "/assets/img/product-2.jpg"
+            },
+            {
+                "id": 3,
+                "nombre": "Colorful Stylish Shirt",
+                "precio": "$123.00",
+                "url_img": "/assets/img/product-3.jpg"
+            },
+            {
+                "id": 4,
+                "nombre": "Colorful Stylish Shirt",
+                "precio": "$124.00",
+                "url_img": "/assets/img/product-4.jpg"
+            },
+            {
+                "id": 5,
+                "nombre": "Colorful Stylish Shirt",
+                "precio": "$125.00",
+                "url_img": "/assets/img/product-5.jpg"
+            },
+            {
+                "id": 6,
+                "nombre": "Colorful Stylish Shirt",
+                "precio": "$126.00",
+                "url_img": "/assets/img/product-1.jpg"
+            },
+            {
+                "id": 7,
+                "nombre": "Colorful Stylish Shirt",
+                "precio": "$127.00",
+                "url_img": "/assets/img/product-2.jpg"
+            },
+            {
+                "id": 8,
+                "nombre": "Colorful Stylish Shirt",
+                "precio": "$128.00",
+                "url_img": "/assets/img/product-3.jpg"
+            },
+            {
+                "id": 9,
+                "nombre": "Colorful Stylish Shirt",
+                "precio": "$129.00",
+                "url_img": "/assets/img/product-4.jpg"
+            },
+            {
+                "id": 10,
+                "nombre": "Colorful Stylish Shirt",
+                "precio": "$1210.00",
+                "url_img": "/assets/img/product-5.jpg"
+            }, {
+                "id": 11,
+                "nombre": "Colorful Stylish Shirt",
+                "precio": "$121.00",
+                "url_img": "/assets/img/product-1.jpg"
+            },
+            {
+                "id": 12,
+                "nombre": "Colorful Stylish Shirt",
+                "precio": "$122.00",
+                "url_img": "/assets/img/product-2.jpg"
+            },
+            {
+                "id": 13,
+                "nombre": "Colorful Stylish Shirt",
+                "precio": "$123.00",
+                "url_img": "/assets/img/product-3.jpg"
+            },
+            {
+                "id": 14,
+                "nombre": "Colorful Stylish Shirt",
+                "precio": "$124.00",
+                "url_img": "/assets/img/product-4.jpg"
+            },
+            {
+                "id": 15,
+                "nombre": "Colorful Stylish Shirt",
+                "precio": "$125.00",
+                "url_img": "/assets/img/product-5.jpg"
+            },
+            {
+                "id": 16,
+                "nombre": "Colorful Stylish Shirt",
+                "precio": "$126.00",
+                "url_img": "/assets/img/product-1.jpg"
+            },
+            {
+                "id": 17,
+                "nombre": "Colorful Stylish Shirt",
+                "precio": "$127.00",
+                "url_img": "/assets/img/product-2.jpg"
+            },
+            {
+                "id": 18,
+                "nombre": "Colorful Stylish Shirt",
+                "precio": "$128.00",
+                "url_img": "/assets/img/product-3.jpg"
+            },
+            {
+                "id": 19,
+                "nombre": "Colorful Stylish Shirt",
+                "precio": "$129.00",
+                "url_img": "/assets/img/product-4.jpg"
+            },
+            {
+                "id": 20,
+                "nombre": "Colorful Stylish Shirt",
+                "precio": "$1210.00",
+                "url_img": "/assets/img/product-5.jpg"
+            }, {
+                "id": 21,
+                "nombre": "Colorful Stylish Shirt",
+                "precio": "$121.00",
+                "url_img": "/assets/img/product-1.jpg"
+            },
+            {
+                "id": 22,
+                "nombre": "Colorful Stylish Shirt",
+                "precio": "$122.00",
+                "url_img": "/assets/img/product-2.jpg"
+            },
+            {
+                "id": 23,
+                "nombre": "Colorful Stylish Shirt",
+                "precio": "$123.00",
+                "url_img": "/assets/img/product-3.jpg"
+            },
+            {
+                "id": 24,
+                "nombre": "Colorful Stylish Shirt",
+                "precio": "$124.00",
+                "url_img": "/assets/img/product-4.jpg"
+            },
+            {
+                "id": 25,
+                "nombre": "Colorful Stylish Shirt",
+                "precio": "$125.00",
+                "url_img": "/assets/img/product-5.jpg"
+            },
+            {
+                "id": 26,
+                "nombre": "Colorful Stylish Shirt",
+                "precio": "$126.00",
+                "url_img": "/assets/img/product-1.jpg"
+            },
+            {
+                "id": 27,
+                "nombre": "Colorful Stylish Shirt",
+                "precio": "$127.00",
+                "url_img": "/assets/img/product-2.jpg"
+            },
+            {
+                "id": 28,
+                "nombre": "Colorful Stylish Shirt",
+                "precio": "$128.00",
+                "url_img": "/assets/img/product-3.jpg"
+            },
+            {
+                "id": 29,
+                "nombre": "Colorful Stylish Shirt",
+                "precio": "$129.00",
+                "url_img": "/assets/img/product-4.jpg"
+            },
+            {
+                "id": 30,
+                "nombre": "Colorful Stylish Shirt",
+                "precio": "$1210.00",
+                "url_img": "/assets/img/product-5.jpg"
+            },
+            {
+                "id": 31,
+                "nombre": "Colorful Stylish Shirt",
+                "precio": "$121.00",
+                "url_img": "/assets/img/product-1.jpg"
+            },
+            {
+                "id": 32,
+                "nombre": "Colorful Stylish Shirt",
+                "precio": "$122.00",
+                "url_img": "/assets/img/product-2.jpg"
+            },
+            {
+                "id": 33,
+                "nombre": "Colorful Stylish Shirt",
+                "precio": "$123.00",
+                "url_img": "/assets/img/product-3.jpg"
+            },
+            {
+                "id": 34,
+                "nombre": "Colorful Stylish Shirt",
+                "precio": "$124.00",
+                "url_img": "/assets/img/product-4.jpg"
+            },
+            {
+                "id": 35,
+                "nombre": "Colorful Stylish Shirt",
+                "precio": "$125.00",
+                "url_img": "/assets/img/product-5.jpg"
+            },
+            {
+                "id": 36,
+                "nombre": "Colorful Stylish Shirt",
+                "precio": "$126.00",
+                "url_img": "/assets/img/product-1.jpg"
+            },
+            {
+                "id": 37,
+                "nombre": "Colorful Stylish Shirt",
+                "precio": "$127.00",
+                "url_img": "/assets/img/product-2.jpg"
+            },
+            {
+                "id": 38,
+                "nombre": "Colorful Stylish Shirt",
+                "precio": "$128.00",
+                "url_img": "/assets/img/product-3.jpg"
+            },
+            {
+                "id": 39,
+                "nombre": "Colorful Stylish Shirt",
+                "precio": "$129.00",
+                "url_img": "/assets/img/product-4.jpg"
+            },
+            {
+                "id": 40,
+                "nombre": "Colorful Stylish Shirt",
+                "precio": "$1210.00",
+                "url_img": "/assets/img/product-5.jpg"
+            },
+            {
+                "id": 41,
+                "nombre": "Colorful Stylish Shirt",
+                "precio": "$1210.00",
+                "url_img": "/assets/img/product-5.jpg"
+            },
+            {
+                "id": 42,
+                "nombre": "Colorful Stylish Shirt",
+                "precio": "$1210.00",
+                "url_img": "/assets/img/product-5.jpg"
+            },
+        ];
+
+
+        var html = "";
+        var html_caje = "";
+        for (var i = 0; i < carros.length; i++) {
+
+            var carros_id = carros[i]["id"];
+            var carros_nombre = carros[i]["nombre"];
+            var carros_precio = carros[i]["precio"];
+            var carros_url_img = carros[i]["url_img"];
+
+ 
+
+            carros_nombre_replace = carros_nombre.replace(/ /g,"_");
+            carros_precio_replace = carros_precio.replace(/ /g,"_");
+            carros_url_img_replace = carros_url_img.replace(/ /g,"_");
+
+
+            html += '<div class="col-md-2">\n\
+  <div class="card" style="max-width: 420px;">\n\
+      <img class="card-img-top" src="'+ carros_url_img + '" alt="Card image cap">\n\
+      <div class="card-body">\n\
+        <h5 class="card-title">'+ carros_nombre + '</h5>\n\
+        <p class="card-text">'+ carros_precio + '</p>\n\
+        <a onclick=replace_top("'+carros_id+'","'+carros_url_img_replace+'","'+carros_nombre_replace+'","'+carros_precio_replace+'") class="btn btn-primary">'+ carros_precio + '</a>\n\
+      </div>\n\
+    </div>\n\
+  </div>';
+
+
+  
+  html_caje += '<div class="col-md-2">\n\
+  <div class="card" style="max-width: 420px;">\n\
+      <img class="card-img-top" src="'+ carros_url_img + '" alt="Card image cap">\n\
+      <div class="card-body">\n\
+        <h5 class="card-title">'+ carros_nombre + '</h5>\n\
+        <p class="card-text">'+ carros_precio + '</p>\n\
+        <a onclick=replace_top("'+carros_id+'","'+carros_url_img_replace+'","'+carros_nombre_replace+'","'+carros_precio_replace+'") class="btn btn-primary">Canje</a>\n\
+      </div>\n\
+    </div>\n\
+  </div>';
+
+
+        }
+
+        $("#list_productos").append(html);
+        $("#list_canjes").append(html_caje);
+
+
+
+        function replace_top(id,img,nombre,precio){
+            // alert(img)
+
+            img = img.replace(/_/g," ");
+            nombre = nombre.replace(/_/g," ");
+            precio = precio.replace(/_/g," ");
+
+            $("#img_product_top").attr("src",img);
+            $("#nombre_product_top").text(nombre);
+            $("#precio_product_top").text(precio);
+            $("#button_top").click();
+        }
+    </script>
+
+</body>
+
 </html>
