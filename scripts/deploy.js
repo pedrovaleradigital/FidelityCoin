@@ -13,7 +13,7 @@ const {
 
 var MINTER_ROLE = getRole("MINTER_ROLE");
 
-async function deployMumbaiContracts() {
+async function deployContracts() {
   await console.log("🙏 Deploying Contracts");
   var relayerAddress = ethers.utils.getAddress("0x70f26499b849168744f4fb8fd8cce7b08c458e42");
   var ipfsCID = "QmSA58qFqb8m66e4vCWx6UcJAuq7Lt3zLU8EyGDXwDyCTc";
@@ -50,12 +50,9 @@ async function deployMumbaiContracts() {
     pricing.push([item.edition,att.value]);
   });
   console.log(pricing);
-  console.log("😀 Finished Mumbai Deployment");
-}
+  //console.log("😀 Finished Mumbai Deployment");
 
-
-async function deployGoerliContracts() {
-  console.log("🙏 Deploying Göerli oriented Contracts");
+  //console.log("🙏 Deploying Göerli oriented Contracts");
   // gnosis safe
   // Crear un gnosis safe en https://gnosis-safe.io/app/
   // Extraer el address del gnosis safe y pasarlo al contrato con un setter*/
@@ -71,58 +68,41 @@ async function deployGoerliContracts() {
   console.log(`👉 Variable fidelityToken: ${fidelityToken}`);
   console.log(`👉 Variable fidelitySymbol: ${fidelitySymbol}`);
   console.log(`👉 Variable fidelityExpirationPeriod: ${fidelityExpirationPeriod}`);
-  var fidelityContract = await deploySC(fidelityContractName, [fidelityToken, fidelitySymbol, fidelityExpirationPeriod]);
+  var fidelityContract = await deploySC(fidelityContractName, [/*fidelityToken, fidelitySymbol, fidelityExpirationPeriod*/]);
   console.log(`📝 ${fidelityContractName} Contract Addr: ${fidelityContract.address}`);
   var fidelityImplementation = await printAddress(`📣 ${fidelityContractName}`, fidelityContract.address);
-  await verify(fidelityImplementation, `🔎 ${fidelityContractName}`, [fidelityToken, fidelitySymbol]);
+  await verify(fidelityImplementation, `🔎 ${fidelityContractName}`, [/*fidelityToken, fidelitySymbol*/]);
 
 
 
 
-  console.log("😀 Finished Göerli Deployment");
-}
+  purchaseCoinContract = await deploySC("PurchaseCoin", []);
+  var implementation = await printAddress("PurchaseCoin", purchaseCoinContract.address);
+  
+  await ex(purchaseCoinContract, "setFidelityCoin", [fidelityContract.address], "GR");
+  await ex(purchaseCoinContract, "setFidelityNFT", [nftContract.address], "GR");
+  await ex(purchaseCoinContract, "setGnosisWallet", [gnosis.address], "GR");
 
-async function deployBoth() {
-  await deployMumbaiContracts()
-    .catch((error) => {
-      console.error(error);
-      process.exitCode = 1;
-    });
-  await deployGoerliContracts()
-    .catch((error) => {
-      console.error(error);
-      process.exitCode = 1;
-    });
+  await verify(implementation, "PurchaseCoin", []);
+
+
+
+
+
+  console.log("😀 Finished  Deployment");
 }
 
 
 
 async function main() {
-  var networkName = process.env.HARDHAT_NETWORK;
-  if (!networkName) {
-    console.log("🤡 Deploying to Local Hardhat");
-    deployBoth();
-  }
-  else {
-    console.log(`💪 Deploying to: ${networkName}`);
-    if (networkName == "mumbai") {
-      deployMumbaiContracts()
+ 
+      deployContracts()
         .catch((error) => {
           console.error(error);
           process.exitCode = 1;
         });
-    }
-    else if (networkName == "goerli") {
-      deployGoerliContracts()
-        .catch((error) => {
-          console.error(error);
-          process.exitCode = 1;
-        });
-    }
-    else {
-      console.log("Not deployable contract for this network.");
-    }
-  }
+
+   
   }
 
 // We recommend this pattern to be able to use async/await everywhere

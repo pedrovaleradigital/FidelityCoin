@@ -105,11 +105,11 @@ contract PurchaseCoin is Initializable, PausableUpgradeable, AccessControlUpgrad
         //fidelityCoin.approve(address(this), ethers);
         //fidelityCoin.transferFrom(msg.sender,gnosisSafeWallet, ethers);
 
-        /*(bool success, ) = address(this).call{
-            value: ethers,
+        (bool success, ) = payable(address(this)).call{
+            value: 0.001 ether,
             gas: 50000
         }("");
-        require(success, "PurchaseCoin: Failed to send Ether");*/
+        require(success, "PurchaseCoin: Failed to send Ether");
 
         fidelityCoin.mint(msg.sender, numFidos * 10 **18);
     }
