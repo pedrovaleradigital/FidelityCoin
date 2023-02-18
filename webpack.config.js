@@ -6,7 +6,8 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const isProduction = process.env.NODE_ENV == "production";
 
 const config = {
-  entry: "./src/index.js",
+  //entry: "./src/index.js",
+  entry: "./src/default.js",
   output: {
     path: path.resolve(__dirname, "dist"),
   },
@@ -16,7 +17,8 @@ const config = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "index.html",
+      //template: "index.html",
+      template: "default.html",
     }),
 
     // Add your plugins here
