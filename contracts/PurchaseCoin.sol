@@ -33,7 +33,7 @@ contract PurchaseCoin is Initializable, PausableUpgradeable, AccessControlUpgrad
     bytes32 public constant UPGRADER_ROLE = keccak256("UPGRADER_ROLE");
 
     uint256 constant FIDO_MIN_BUY = 500;
-    uint256 constant FIDO_VALUE_ETHER = 0.007814 ether / FIDO_MIN_BUY;
+    uint256 constant FIDO_VALUE_ETHER = 8.61 * 10**18 / FIDO_MIN_BUY;
     
 
     // instanciamos el token en el contrato
@@ -84,7 +84,7 @@ contract PurchaseCoin is Initializable, PausableUpgradeable, AccessControlUpgrad
     event DeliverNft(address winnerAccount, uint256 nftId);
     /**********************/
 
-    function purchaseFidoUsingSoles(uint256 _amountSoles) external payable {
+    function purchaseFidoUsingSoles(uint256 _amountSoles) external {
         
         require(_amountSoles > 0, "PurchaseCoin: Not enough amount in Soles");
 
