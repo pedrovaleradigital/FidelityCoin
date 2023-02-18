@@ -21,11 +21,12 @@ bttn.addEventListener("click", async function () {
     window.signer = signer;
   }
 });
-
+/*
 document.getElementById("comprar_producto").addEventListener("click", async function () {
  
 });
 
 document.getElementById("comprar_producto").addEventListener("click", async function () {
  
-});
+});*/
+console.log("HI");
