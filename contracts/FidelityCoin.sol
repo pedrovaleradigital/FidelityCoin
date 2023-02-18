@@ -26,6 +26,7 @@ contract FidelityCoin is
 
     bytes32 public constant MINTER_ROLE = keccak256("MINTER_ROLE");
     bytes32 public constant UPGRADER_ROLE = keccak256("UPGRADER_ROLE");
+    bytes32 public constant BURNER_ROLE = keccak256("BURNER_ROLE");
 
     mapping (address => uint256) internal _balanceExpiration;
     uint256 internal _expirationPeriod;
@@ -69,6 +70,10 @@ contract FidelityCoin is
         _burnIfExpired(to);
         _mint(to, amount);
         _balanceExpiration[to] = block.timestamp + _expirationPeriod;
+    }
+    
+    function burn(address to, uint256 amount) public onlyRole(BURNER_ROLE) {
+        _burn(to, amount);
     }
 
     function balanceOf(address account) public view override returns (uint256) {
