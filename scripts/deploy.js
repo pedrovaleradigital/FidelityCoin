@@ -80,7 +80,8 @@ async function deployContracts() {
   await ex(purchaseCoinContract, "setFidelityNFT", [nftContract.address], "GR");
   await ex(purchaseCoinContract, "setGnosisWallet", [gnosis.address], "GR");
 
-/*
+  await verify(implementation, "PurchaseCoin", []);
+
   var exResult = await ex(nftContract, "grantRole", [MINTER_ROLE, purchaseCoinContract.address], "🤬 Error Granting Role");
   if (exResult.events[0].args["role"] == MINTER_ROLE && exResult.events[0].args["account"] == purchaseCoinContract.address) {
     console.log(`✅ Address ${purchaseCoinContract.address} has MINTER_ROLE granted in Contract ${nftContractName}`);
@@ -106,10 +107,9 @@ async function deployContracts() {
     console.log(`❌ Address ${purchaseCoinContract.address} has NOT BURNER_ROLE granted in Contract ${fidelityContractName}`);
   }
 
-*/
 
 
-  await verify(implementation, "PurchaseCoin", []);
+
 
 
 

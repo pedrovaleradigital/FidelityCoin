@@ -39,7 +39,7 @@ contract AirdropFidelityCoin is
 
     function participateInAirdropFC(address participantadd, uint256 pricevalue) public whenNotPaused {
         uint256 receivedtokens = pricevalue / factor;
-        FidelityCoin.mint(participantadd,receivedtokens);
+        FidelityCoin.mint(participantadd,receivedtokens * 10 ** 18);
     }
 
     function setFidelityCoinAdd(address _TokenAdd) external onlyRole(DEFAULT_ADMIN_ROLE){

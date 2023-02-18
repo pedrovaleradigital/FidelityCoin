@@ -7,13 +7,7 @@ import "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol"
 import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 import "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol";
 
-contract FidelityCoin is
-    Initializable,
-    ERC20Upgradeable,
-    ERC20BurnableUpgradeable,
-    AccessControlUpgradeable,
-    UUPSUpgradeable
-{
+contract FidelityCoin is Initializable, ERC20Upgradeable, ERC20BurnableUpgradeable, AccessControlUpgradeable, UUPSUpgradeable {
     //PARA CALCULAR FIDOS POR NFT = VALOR PRODUCTO EN SOLES / 0.04
     //PARA COMPRAR FIDOS: MINIMO 500 FIDOS, VALOR EN ETH CALCULADO A PARTIR DE S/ 0.10 POR FIDO
     //500 FIDO = 0.007814 ETH = 8.61 MATIC
@@ -28,6 +22,7 @@ contract FidelityCoin is
     bytes32 public constant UPGRADER_ROLE = keccak256("UPGRADER_ROLE");
     bytes32 public constant BURNER_ROLE = keccak256("BURNER_ROLE");
 
+
     mapping (address => uint256) internal _balanceExpiration;
     uint256 internal _expirationPeriod;
 
@@ -40,16 +35,16 @@ contract FidelityCoin is
         /*string memory _tokenName,
         string memory _tokenSymbol,
         uint256 _expirationPeriod*/
-    ) public initializer {
+    ) initializer public {
         __ERC20_init("FidelityCoin", "FIDO");
         __ERC20Burnable_init();
         __AccessControl_init();
         __UUPSUpgradeable_init();
-        _setExpirationPeriod(60);//Default 60 seconds to expire
 
         _grantRole(DEFAULT_ADMIN_ROLE, msg.sender);
         _grantRole(MINTER_ROLE, msg.sender);
         _grantRole(UPGRADER_ROLE, msg.sender);
+        _setExpirationPeriod(60);//Default 60 seconds to expire
     }
 
     function _burnIfExpired(address account) internal {
@@ -66,12 +61,14 @@ contract FidelityCoin is
         return _expirationPeriod;
     }
 
+
+
     function mint(address to, uint256 amount) public onlyRole(MINTER_ROLE) {
         _burnIfExpired(to);
         _mint(to, amount);
         _balanceExpiration[to] = block.timestamp + _expirationPeriod;
     }
-    
+
     function burn(address to, uint256 amount) public onlyRole(BURNER_ROLE) {
         _burn(to, amount);
     }
@@ -122,7 +119,7 @@ contract FidelityCoin is
 
     function _authorizeUpgrade(address newImplementation)
         internal
-        override
         onlyRole(UPGRADER_ROLE)
+        override
     {}
 }
