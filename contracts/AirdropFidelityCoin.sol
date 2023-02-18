@@ -22,7 +22,7 @@ contract AirdropFidelityCoin is
 
     IFidelityCoin FidelityCoin;
     address public FidelityCoinAdd;
-    uint256 factor = 7.5;
+    uint factor;
 
     /// @custom:oz-upgrades-unsafe-allow constructor
     constructor() {
@@ -45,6 +45,10 @@ contract AirdropFidelityCoin is
     function setFidelityCoinAdd(address _TokenAdd) external onlyRole(DEFAULT_ADMIN_ROLE){
         FidelityCoin = IFidelityCoin(_TokenAdd);
         FidelityCoinAdd = _TokenAdd;
+    }
+
+    function getFidelityCoinAdd() public view returns (address){
+        return FidelityCoinAdd;
     }
 
     function pause() public onlyRole(PAUSER_ROLE) {
