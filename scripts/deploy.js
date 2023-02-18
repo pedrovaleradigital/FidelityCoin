@@ -52,8 +52,8 @@ async function deployContracts() {
   });
   console.log(pricing);*/
 
-  
-  var gnosis = { address: ethers.utils.getAddress("0xe592609c24e8dc84c82edf7a1281a9e15d259bcb") };
+
+  var gnosis = { address: ethers.utils.getAddress("0xed76c29D4B1fE37e101eAe4E02Fc3633f8aa86cd") };
 
 
   var fidelityContractName = "FidelityCoin";
@@ -70,18 +70,32 @@ async function deployContracts() {
   var fidelityImplementation = await printAddress(`📣 ${fidelityContractName}`, fidelityContract.address);
   await verify(fidelityImplementation, `🔎 ${fidelityContractName}`, [/*fidelityToken, fidelitySymbol*/]);
 
+  var airdropFidelityContractName = "AirdropFidelityCoin";
+  console.log(`🥚 Deploying ${airdropFidelityContractName}`);
+  var airdropFidelityContract = await deploySC(airdropFidelityContractName, []);
+  console.log(`📝 ${airdropFidelityContractName} Contract Addr: ${airdropFidelityContract.address}`);
+  var airdropFidelityImplementation = await printAddress(`📣 ${airdropFidelityContractName}`, airdropFidelityContract.address);
+
+  await ex(airdropFidelityContract, "setFidelityCoinAdd", [fidelityContract.address], "GR");
+
+  var exResult = await ex(fidelityContract, "grantRole", [MINTER_ROLE, airdropFidelityContract.address], "🤬 Error Granting Role");
+  if (exResult.events[0].args["role"] == MINTER_ROLE && exResult.events[0].args["account"] == airdropFidelityContract.address) {
+    console.log(`✅ Address ${airdropFidelityContract.address} has MINTER_ROLE granted in Contract ${fidelityContractName}`);
+  }
+  else {
+    console.log(`❌ Address ${airdropFidelityContract.address} has NOT MINTER_ROLE granted in Contract ${fidelityContractName}`);
+  }
+
+  await verify(airdropFidelityImplementation, `🔎 ${airdropFidelityContractName}`, []);
+
 
 
 
   purchaseCoinContract = await deploySC("PurchaseCoin", []);
   var implementation = await printAddress("PurchaseCoin", purchaseCoinContract.address);
-  
   await ex(purchaseCoinContract, "setFidelityCoin", [fidelityContract.address], "GR");
   await ex(purchaseCoinContract, "setFidelityNFT", [nftContract.address], "GR");
   await ex(purchaseCoinContract, "setGnosisWallet", [gnosis.address], "GR");
-
-  await verify(implementation, "PurchaseCoin", []);
-
   var exResult = await ex(nftContract, "grantRole", [MINTER_ROLE, purchaseCoinContract.address], "🤬 Error Granting Role");
   if (exResult.events[0].args["role"] == MINTER_ROLE && exResult.events[0].args["account"] == purchaseCoinContract.address) {
     console.log(`✅ Address ${purchaseCoinContract.address} has MINTER_ROLE granted in Contract ${nftContractName}`);
@@ -89,8 +103,6 @@ async function deployContracts() {
   else {
     console.log(`❌ Address ${purchaseCoinContract.address} has NOT MINTER_ROLE granted in Contract ${nftContractName}`);
   }
-
-
   var exResult = await ex(fidelityContract, "grantRole", [MINTER_ROLE, purchaseCoinContract.address], "🤬 Error Granting Role");
   if (exResult.events[0].args["role"] == MINTER_ROLE && exResult.events[0].args["account"] == purchaseCoinContract.address) {
     console.log(`✅ Address ${purchaseCoinContract.address} has MINTER_ROLE granted in Contract ${fidelityContractName}`);
@@ -98,7 +110,6 @@ async function deployContracts() {
   else {
     console.log(`❌ Address ${purchaseCoinContract.address} has NOT MINTER_ROLE granted in Contract ${fidelityContractName}`);
   }
-
   var exResult = await ex(fidelityContract, "grantRole", [BURNER_ROLE, purchaseCoinContract.address], "🤬 Error Granting Role");
   if (exResult.events[0].args["role"] == BURNER_ROLE && exResult.events[0].args["account"] == purchaseCoinContract.address) {
     console.log(`✅ Address ${purchaseCoinContract.address} has BURNER_ROLE granted in Contract ${fidelityContractName}`);
@@ -106,12 +117,7 @@ async function deployContracts() {
   else {
     console.log(`❌ Address ${purchaseCoinContract.address} has NOT BURNER_ROLE granted in Contract ${fidelityContractName}`);
   }
-
-
-
-
-
-
+  await verify(implementation, "PurchaseCoin", []);
 
 
 

@@ -22,7 +22,7 @@ contract AirdropFidelityCoin is
 
     IFidelityCoin FidelityCoin;
     address public FidelityCoinAdd;
-    uint factor = 7;
+    uint public constant factor = 7;
 
     /// @custom:oz-upgrades-unsafe-allow constructor
     constructor() {
