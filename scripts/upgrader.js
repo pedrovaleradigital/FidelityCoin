@@ -1,37 +1,34 @@
 require("dotenv").config();
 
 
-async function upgradeFidelityNFT() {
+async function upgradeContract(_contractName, _contractAddress) {
 
-    console.log("Upgrading FidelityNFT ...");
+    console.log(`Upgrading ${_contractName} ...`);
 
-    var FidelityNFTProxyAdd = "0xD92f508a30F89AFdF8411BE8db50D3eD8ac6a6bA";
-    const FidelityNFTUpgrade = await hre.ethers.getContractFactory("FidelityNFT");
+    const ContractUpgrade = await hre.ethers.getContractFactory(_contractName);
 
-    var fidelityNFTUpgrade = await upgrades.upgradeProxy(FidelityNFTProxyAdd, FidelityNFTUpgrade);
+    var contractUpgrade = await upgrades.upgradeProxy(_contractAddress, ContractUpgrade);
     try {
-        await fidelityNFTUpgrade.deployTransaction.wait(5);
+        await contractUpgrade.deployTransaction.wait(5);
     } catch (error) {
         console.log(error);
     }
 
-    var implmntAddress = await upgrades.erc1967.getImplementationAddress(fidelityNFTUpgrade.address);
+    var implUpgradeAddress = await upgrades.erc1967.getImplementationAddress(contractUpgrade.address);
 
-    console.log("Proxy address fidelityNFTUpgrade:", fidelityNFTUpgrade.address);
-    console.log("Implementation address fidelityNFTUpgrade:", implmntAddress);
+    console.log(`${_contractName} Proxy address: ${contractUpgrade.address}`);
+    console.log(`${_contractName} Impl. address: ${implUpgradeAddress}`);
 
     await hre.run("verify:verify", {
-        address: implmntAddress,
+        address: implUpgradeAddress,
         constructorArguments: [],
     });
-
-
 }
 
 
 async function main() {
 
-    upgradeFidelityNFT()
+    upgradeContract("FidelityNFT","0xD92f508a30F89AFdF8411BE8db50D3eD8ac6a6bA")
         .catch((error) => {
             console.error(error);
             process.exitCode = 1;
