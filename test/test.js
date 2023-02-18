@@ -2,7 +2,7 @@ const { expect } = require("chai");
 const { ethers } = require("hardhat");
 const { time } = require("@nomicfoundation/hardhat-network-helpers");
 
-const { getRole, deploySC, deploySCNoUp, ex, pEth } = require("../utils");
+const { getRole, deploySC, deploySCNoUp, ex, pEth, bn } = require("../utils");
 
 const MINTER_ROLE = getRole("MINTER_ROLE");
 const BURNER_ROLE = getRole("BURNER_ROLE");
@@ -30,7 +30,7 @@ describe("FIDELITY COIN TESTING", function () {
 
   
   async function deployFIDO() {
-    fidelityCoin = await deploySC("FidelityCoin", [fidelityToken, fidelitySymbol, fidelityExpirationPeriod]);
+    fidelityCoin = await deploySC("FidelityCoin", []);
   }
 
   async function deployNFT() {
@@ -164,7 +164,7 @@ describe("FIDELITY COIN TESTING", function () {
 
     });
 
-    it("Usuario no dio permiso de fidelityCoin a PurchaseCoin", async () => {
+    it("Usuario no dio permiso fidelityCoin a PurchaseCoin", async () => {
       
       //bob ya ha participado. Tiene 100
       await fidelityCoin.connect(owner).mint(bob.address, pEth("100"));
@@ -202,7 +202,7 @@ describe("FIDELITY COIN TESTING", function () {
 
       it("Usuario no dio permiso de fidelityCoin a PurchaseCoin", async () => {
         const transaction = {
-          value: pEth("0.007814"),
+          value: pEth("8.61"),
         };
         
         await expect(
@@ -212,53 +212,52 @@ describe("FIDELITY COIN TESTING", function () {
       });
 
       it("Se envia vuelto (ether) al usuario", async () => {
-        var min = "0.007814";
-        var sent = "0.007854";
+        var min = "8.61";
+        var sent = "9";
 
         var numFidos = Math.floor(pEth(sent) * 500 / pEth(min));
         var ethers = Math.floor(numFidos * pEth(min) / 500);
         //var vuelto = pEth(sent) - ethers ; 
-
+        //console.log('-'+ethers.toString())
         await fidelityCoin.grantRole(MINTER_ROLE, purchaseCoin.address);
 
         // SE ENVIA 0.007814 + 0.000010
         const transaction = {
-          value: pEth(sent),
+          value: bn.from(pEth(sent)),
         };
         
         //SE ESPERA DE VUELTO: 0.000030 ==> TENDRA DE BALANCE -0-007844 + 0.000030
         await expect(
           purchaseCoin.connect(bob).depositEthForFido(transaction)
-        ).to.changeEtherBalance(bob.address, -ethers);
+        ).to.changeEtherBalance(bob.address, bn.from('-'+ethers.toString()));
 
       });
 
       it("Gnosis safe recibe los ethers por los FIDO comprados", async () => {
-        var min = "0.007814";
-        var sent = "0.007854";
+        var min = "8.61";
+        var sent = "9";
 
         var numFidos = Math.floor(pEth(sent) * 500 / pEth(min));
         var ethers = Math.floor(numFidos * pEth(min) / 500);
 
         await fidelityCoin.grantRole(MINTER_ROLE, purchaseCoin.address);
-
         const transaction = {
-          value: pEth(sent),
+          value: bn.from(pEth(sent)),
         };
         
         await expect(
           purchaseCoin.connect(bob).depositEthForFido(transaction)
-        ).to.changeEtherBalance(gnosis, ethers);
+        ).to.changeEtherBalance(gnosis, bn.from(ethers.toString()));
 
       });
 
       it("Se valida que se obtenga fidos por el envio de ether", async () => {
-        var sent = "0.007814"; // 500 fidos
+        var sent = "8.61"; // 500 fidos
         await fidelityCoin.grantRole(MINTER_ROLE, purchaseCoin.address);
 
         // SE ENVIA 0.007814 + 0.000010
         const transaction = {
-          value: pEth(sent),
+          value: bn.from(pEth(sent)),
         };
         
         //SE ESPERA OBTENER 500 FIDOS
