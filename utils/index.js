@@ -3,6 +3,7 @@ const hre = require("hardhat");
 const gcf = hre.ethers.getContractFactory;
 const dp = hre.upgrades.deployProxy;
 const pEth = hre.ethers.utils.parseEther;
+const bn = hre.ethers.BigNumber;
 
 function getRole(role) {
   return hre.ethers.utils.keccak256(hre.ethers.utils.toUtf8Bytes(role));
@@ -79,4 +80,5 @@ module.exports = {
   deploySC,
   deploySCNoUp,
   pEth,
+  bn
 };
