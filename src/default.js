@@ -10,8 +10,6 @@ window.ethers = ethers;
 var provider, signer, account;
 var airdropContract, fidelityCoinContract, fidelityNftContract, purchaseCoinContract;
 
-var jsonprovider;
-
 var airdropAddress = "0x40EA8f4399ff7B9e5A796c51d9D3aE2a0b92Fa68";
 var fidelityCoinAddress = "0x80170Fe3fC29056aB6aa65cbE16f2791C030ebeC";
 var fidelityNftAddress = "0xD92f508a30F89AFdF8411BE8db50D3eD8ac6a6bA";
@@ -52,6 +50,7 @@ function addListenerConnectToMetamask() {
       document.getElementById("connectedChain").innerHTML = "";
       document.getElementById("connectError").innerHTML = "";
       document.getElementById("fidoBalance").innerHTML = "";
+      document.getElementById("fidoSecondsToExpire").innerHTML = "";
       account = "";
       signer = "";
       await ethereum
@@ -78,7 +77,7 @@ function addListenerFIDObalance() {
     console.log("FIDO Balance Button Clicked");
     console.log("Getting Balance...");
     var balance = await fidelityCoinContract.balanceOf(account);
-    document.getElementById("fidoBalance").innerHTML = ethers.utils.formatUnits(balance, 6);
+    document.getElementById("fidoBalance").innerHTML = ethers.utils.formatUnits(balance, 18);
     console.log("Getting Seconds...");
     var secondsToExpire = await fidelityCoinContract.secondsToExpire(account);
     document.getElementById("fidoSecondsToExpire").innerHTML = secondsToExpire;
