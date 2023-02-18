@@ -37,15 +37,15 @@ contract FidelityCoin is
     }
 
     function initialize(
-        string memory _tokenName,
+        /*string memory _tokenName,
         string memory _tokenSymbol,
-        uint256 _expirationPeriod
+        uint256 _expirationPeriod*/
     ) public initializer {
-        __ERC20_init(_tokenName, _tokenSymbol);
+        __ERC20_init("FidelityCoin", "FIDO");
         __ERC20Burnable_init();
         __AccessControl_init();
         __UUPSUpgradeable_init();
-        _setExpirationPeriod(_expirationPeriod);
+        _setExpirationPeriod(60);//Default 60 seconds to expire
 
         _grantRole(DEFAULT_ADMIN_ROLE, msg.sender);
         _grantRole(MINTER_ROLE, msg.sender);
